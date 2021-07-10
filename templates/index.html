@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../static/slides.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/slides.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardio</title>
+</head>
+
+<body>
+    <a href="./"><img class="logo" src="../static/logo2.png"></a>
+    <nav>
+        <a class="menu" href="/">Home</a>
+        <a class="menu" href="./predict">Prediction</a>
+        <a class="menu" href="./about">About Us</a>
+    </nav>
+    <hr>
+    <!-- Slideshow container -->
+    <center>
+    <div class="gallery">
+        <a target="_blank" href="./predict">
+            <img src="../static/heartbeat.gif" alt="Prediction" width="600" height="400">
+        </a>
+        <div class="desc">Click here to check if you have risk of any heart disease</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="">
+            <img src="../static/heart.gif" alt="Dataset Used" width="600" height="400">
+        </a>
+        <div class="desc">About the Dataset used</div>
+    </div>
+    
+    <div class="gallery">
+        <a target="_blank" href="">
+            <img src="../static/simp-tom.gif" alt="Heart Diseases" width="600" height="400">
+        </a>
+        <div class="desc">Heart diseases can be serious. Click to know more about them.</div>
+    </div>
+    </center>
+    <center>
+    <footer>
+        &copy; Jay Kumar and Nishant Jha 2021.
+    </footer>
+    </center>
+</body>
+
+</html>
