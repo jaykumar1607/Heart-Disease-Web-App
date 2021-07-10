@@ -1,0 +1,44 @@
+body{
+    margin-top: 25px;
+    margin-right: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo{
+    padding-left: 50px;
+}
+ul{
+    list-style-type: none;
+}
+hr{
+    opacity: 0.6;
+    color: dimgray;
+}
+
+nav{
+    display: flex;
+    float: right;
+    margin: 50px 50px 0 0;
+    font-size: 18px;
+}
+
+a.menu{
+    color: black;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a.menu:hover{
+    background-color: pink;
+    transition: 0.5s;
+}
+
+footer{
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/ 
+    height: 40px;
+}

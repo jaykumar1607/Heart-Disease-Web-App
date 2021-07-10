@@ -1,38 +1,66 @@
-<h1><center>Heart Disease Prediction</center></h1>
-<br>
-<h2><center>Please enter your test details below:</center></h2>
-<br>
-<form  method="POST"><center>
-    {# This hidden_tag is a CSRF security feature. #}
-    {{ form.hidden_tag() }}
+<!DOCTYPE html>
+<html lang="en">
 
-    <p>{{ form.age.label }} &emsp; {{form.age}}</p>
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardio - Prediction</title>
+</head>
+
+<body>
+    <a href="./"><img class="logo" src="../static/logo2.png"></a>
+    <nav>
+        <a class="menu" href="/">Home</a>
+        <a class="menu" href="./predict">Prediction</a>
+        <a class="menu" href="./about">About Us</a>
+    </nav>
+    <hr>
+    <h1>
+        <center>Heart Disease Prediction</center>
+    </h1>
     <br>
-    <p>{{ form.sex.label}} &emsp; {{form.sex}}</p>
+    <h2>
+        <center>Please enter your test details below:</center>
+    </h2>
     <br>
-    <p>{{form.cp.label}} &emsp; {{form.cp}}</p>
-    <br>
-    <p>{{form.trestbps.label}} &emsp; {{form.trestbps}}</p>
-    <br>
-    <p>{{form.chol.label}} &emsp; {{form.chol}}</p>
-    <br>
-    <p>{{form.fbs.label}} &emsp; {{form.fbs}}</p>
-    <br>
-    <p>{{form.restecg.label}} &emsp; {{form.restecg}}</p>
-    <br>
-    <p>{{form.thalach.label}} &emsp; {{form.thalach}}</p>
-    <br>
-    <p>{{form.exang.label}} &emsp; {{form.exang}}</p>
-    <br>
-    <p>{{form.oldpeak.label}} &emsp; {{form.oldpeak}}</p>
-    <br>
-    <p>{{form.slope.label}} &emsp; {{form.slope}}</p>
-    <br>
-    <p>{{form.thal.label}} &emsp; {{form.thal}}</p>
-    <br>
-    <p>{{form.ca.label}} &emsp; {{form.ca}}</p>
-    <br>
-    <h2>{{ form.submit() }}</h2>
-    <br>
-</center>
-</form>
+    <form method="POST">
+        <center>
+            {# This hidden_tag is a CSRF security feature. #}
+            {{ form.hidden_tag() }}
+
+            <p>{{ form.age.label }} &emsp; {{form.age}}</p>
+            <br>
+            <p>{{ form.sex.label}} &emsp; {{form.sex}}</p>
+            <br>
+            <p>{{form.cp.label}} &emsp; {{form.cp}}</p>
+            <br>
+            <p>{{form.trestbps.label}} &emsp; {{form.trestbps}}</p>
+            <br>
+            <p>{{form.chol.label}} &emsp; {{form.chol}}</p>
+            <br>
+            <p>{{form.fbs.label}} &emsp; {{form.fbs}}</p>
+            <br>
+            <p>{{form.restecg.label}} &emsp; {{form.restecg}}</p>
+            <br>
+            <p>{{form.thalach.label}} &emsp; {{form.thalach}}</p>
+            <br>
+            <p>{{form.exang.label}} &emsp; {{form.exang}}</p>
+            <br>
+            <p>{{form.oldpeak.label}} &emsp; {{form.oldpeak}}</p>
+            <br>
+            <p>{{form.slope.label}} &emsp; {{form.slope}}</p>
+            <br>
+            <p>{{form.thal.label}} &emsp; {{form.thal}}</p>
+            <br>
+            <p>{{form.ca.label}} &emsp; {{form.ca}}</p>
+            <br>
+            <h2>{{ form.submit() }}</h2>
+            <br>
+        </center>
+    </form>
+</body>
+
+</html>

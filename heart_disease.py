@@ -48,8 +48,15 @@ class Heart_Form(FlaskForm):
     # Submission Field
     submit = SubmitField('Analyze')
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/predict',methods=['GET','POST'])
 def home():
 
     form = Heart_Form()
@@ -76,7 +83,7 @@ def home():
 
 loaded_model = joblib.load('heart_disease.sav')
 
-@app.route('/prediction')
+@app.route('/result')
 def prediction():
     content={}
     content['thal'] = session['thal']

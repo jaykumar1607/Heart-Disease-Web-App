@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cardio - Prediction - Results</title>
+</head>
+
+<body>
+	<a href="./"><img class="logo" src="../static/logo2.png"></a>
+    <nav>
+        <a class="menu" href="/">Home</a>
+        <a class="menu" href="./predict">Prediction</a>
+        <a class="menu" href="./about">About Us</a>
+    </nav>
+    <hr>
+
 <h1><center>Thank You. Here is the Information You Gave:</center></h1>
 <ul><center>
 	<li>Thalium Stress Test:&emsp;{{session['thal']}}</li>
@@ -18,4 +39,6 @@
 <h2><center>Result: {{results}}</center></h2>
 <center><image src='/plot_bp.png'>
 <center><image src='/plot_chol.png'>
-<center><image src='/plot_thalach.png'>
+<center><image src='/plot_thalach.png'>	
+</body>
+</html>
