@@ -1,4 +1,4 @@
-from flask import Flask,render_template,url_for,session,redirect,Response
+from flask import Flask,render_template,url_for,session,redirect
 import pandas as pd
 import numpy as np
 import joblib
@@ -63,13 +63,6 @@ def home():
         session['oldpeak'] = form.oldpeak.data
         session['slope'] = form.slope.data
 
-        session['age'] = form.age.data
-        session['trestbps'] = form.trestbps.data
-        session['chol'] = form.chol.data
-        session['thalach'] = form.thalach.data
-        session['restecg'] = form.restecg.data
-        session['fbs'] = form.fbs.data
-
         return redirect(url_for('prediction'))
 
     return render_template('home.html',form=form)
@@ -90,34 +83,6 @@ def prediction():
     results = make_predictions(loaded_model,content)
 
     return render_template('prediction.html',results=results)
-
-# Plots for the analytical report
-plots = Plots()
-
-@app.route('/plot_chol.png')
-def plot1_png():
-    inp=session['chol']
-    fig = plots.chol_plot(inp)
-    output = io.BytesIO()
-    FigureCanvas(fig).print_png(output)
-    return Response(output.getvalue(), mimetype='image/png')
-
-@app.route('/plot_bp.png')
-def plot2_png():
-    inp=session['trestbps']
-    fig = plots.bp_plot(inp)
-    output = io.BytesIO()
-    FigureCanvas(fig).print_png(output)
-    return Response(output.getvalue(), mimetype='image/png')
-
-@app.route('/plot_thalach.png')
-def plot3_png():
-    inp=session['thalach']
-    fig = plots.thalach_plot(inp)
-    output = io.BytesIO()
-    FigureCanvas(fig).print_png(output)
-    return Response(output.getvalue(), mimetype='image/png')
-
 
 if __name__ == '__main__':
     app.run()
