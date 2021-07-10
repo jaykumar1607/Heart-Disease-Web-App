@@ -72,7 +72,7 @@ def home():
 
         return redirect(url_for('prediction'))
 
-    return render_template('home.html',form=form)
+    return render_template('prediction.html',form=form)
 
 loaded_model = joblib.load('heart_disease.sav')
 
@@ -89,7 +89,7 @@ def prediction():
 
     results = make_predictions(loaded_model,content)
 
-    return render_template('prediction.html',results=results)
+    return render_template('result.html',results=results)
 
 # Plots for the analytical report
 plots = Plots()
