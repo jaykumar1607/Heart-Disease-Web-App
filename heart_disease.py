@@ -10,7 +10,7 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 import matplotlib
 matplotlib.use('Agg')
 import io
-import matplotlib.pyplot as plt
+from plots import Plots
 
 def make_predictions(model,sample_json):
 
@@ -99,67 +99,31 @@ def prediction():
     return render_template('result.html',results=results)
 
 # Plots for the analytical report
-df = pd.read_csv('./heart.csv')
-colors_red = ["#331313", "#582626", '#9E1717', '#D35151', '#E9B4B4']
-colors_dark = ["#1F1F1F", "#313131", '#636363', '#AEAEAE', '#DADADA']
+plots = Plots()
 
-@app.route('/plot.png')
-def plot_png():
-    fig = create_figure()
+@app.route('/plot_chol.png')
+def plot1_png():
+    inp=session['chol']
+    fig = plots.chol_plot(inp)
     output = io.BytesIO()
     FigureCanvas(fig).print_png(output)
     return Response(output.getvalue(), mimetype='image/png')
 
-def create_figure():
-    fig,ax = plt.subplots(figsize=(10,4))
+@app.route('/plot_bp.png')
+def plot2_png():
+    inp=session['trestbps']
+    fig = plots.bp_plot(inp)
+    output = io.BytesIO()
+    FigureCanvas(fig).print_png(output)
+    return Response(output.getvalue(), mimetype='image/png')
 
-    # Making the KDE plot
-    df['chol'].plot.kde(ls='--',color=colors_red[2],ax=ax)
-
-    # Removing the axis
-    ax.spines['left'].set_color(None)
-    ax.spines['top'].set_color(None)
-    ax.spines['right'].set_color(None)
-
-    # Removing labels from y axis
-    ax.set_ylabel(None)
-    ax.set_yticks([])
-    ax.set_xlabel('Serum Cholestrol Level (mg/dl)',fontsize=12)
-
-    # Filling the plot to signify different levels of cholesterol
-    line = ax.get_lines()[-1]
-    x, y = line.get_data()
-    mask1 = x > 200
-    mask2 = x>=240
-    x1, y1 = x[mask1], y[mask1]
-    x2,y2 = x[mask2],y[mask2]
-    ax.fill_between(x1, y1, alpha=0.5, facecolor=colors_red[3])
-    ax.fill_between(x2, y2, alpha=0.5, facecolor=colors_red[2])
-
-    # y values wrt to x
-    vals = pd.DataFrame(y,index=np.round(x))
-    inp=session['chol']
-
-    # Making horizontal lines which connect to the text boxes
-    ax.hlines(0.0018,xmin=300,xmax=510,ls='-.',color=colors_dark[2],lw=0.8) # High Cholesterol
-    ax.hlines(0.005,xmin=225,xmax=500,ls='-.',color=colors_dark[2],lw=0.8)  # Borderline High Cholesterol
-    ax.hlines(vals.loc[np.round(inp)],xmin=0,xmax=inp-3,ls='-',color=colors_dark[2],lw=1)  # You are here!
-
-    # Making a point to indicate where the patient stands in the plot
-    ax.scatter(inp,vals.loc[np.round(inp)],c=colors_dark[1])
-
-    # Making the text boxes
-    fig.text(s='High\nCholesterol',x=0.67,y=0.29,
-             fontdict={'color':'white','size':10,'fontweight':'semibold','fontname':'monospace','ha':'center'},
-             backgroundcolor=colors_dark[2])
-    fig.text(s='Borderline High\nCholesterol',x=0.70,y=0.56,
-             fontdict={'color':'white','size':10,'fontweight':'semibold','fontname':'monospace','ha':'center'},
-             backgroundcolor=colors_dark[2])
-    ax.text(s='You are here!',x=0,y=vals.loc[np.round(inp)],
-             fontdict={'color':'white','size':10,'fontweight':'semibold','fontname':'monospace','ha':'center'},
-             backgroundcolor=colors_dark[2])
-
-    return fig
+@app.route('/plot_thalach.png')
+def plot3_png():
+    inp=session['thalach']
+    fig = plots.thalach_plot(inp)
+    output = io.BytesIO()
+    FigureCanvas(fig).print_png(output)
+    return Response(output.getvalue(), mimetype='image/png')
 
 
 if __name__ == '__main__':
