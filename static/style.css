@@ -39,6 +39,12 @@ footer{
     padding: 10px 10px 0px 10px;
     bottom: 0;
     width: 100%;
-    /* Height of the footer*/ 
+    /* Height of the footer*/
     height: 40px;
+}
+table, th, td{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: monospace;
+    border: 1px solid black;
 }

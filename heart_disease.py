@@ -2,7 +2,7 @@ from flask import Flask,render_template,url_for,session,redirect,Response
 import pandas as pd
 import numpy as np
 import joblib
-from wtforms import FloatField,SubmitField,SelectField
+from wtforms import FloatField,SubmitField,SelectField,StringField
 from flask_wtf import FlaskForm
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
@@ -38,6 +38,7 @@ class Heart_Form(FlaskForm):
     slope = SelectField('The slope of the peak excercise ST segment',choices=[(0,'Downsloping'),(1,'Flat'),(2,'Upsloping')])
 
     # Fields for Graphs
+    name = StringField('Patient\'s Name')
     age = FloatField('Age')
     trestbps = FloatField('Resting Systolic Blood Pressure (mm Hg)')
     chol = FloatField('Serum Cholesterol Levels (mg/dl)')
@@ -70,6 +71,7 @@ def home():
         session['oldpeak'] = form.oldpeak.data
         session['slope'] = form.slope.data
 
+        session['name']=form.name.data
         session['age'] = form.age.data
         session['trestbps'] = form.trestbps.data
         session['chol'] = form.chol.data

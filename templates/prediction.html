@@ -30,7 +30,8 @@
         <center>
             {# This hidden_tag is a CSRF security feature. #}
             {{ form.hidden_tag() }}
-
+            <p>{{ form.name.label }} &emsp; {{form.name}}</p>
+            <br>
             <p>{{ form.age.label }} &emsp; {{form.age}}</p>
             <br>
             <p>{{ form.sex.label}} &emsp; {{form.sex}}</p>
