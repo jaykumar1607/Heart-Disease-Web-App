@@ -22,6 +22,60 @@ def make_predictions(model,sample_json):
     else:
         return 'POSITIVE'
 
+def report_cat(feature_name,feature_value):
+    cat_feat={
+        'cp':{
+            0:'You have Asymptomatic Pain which puts you at a lower chance of causing a heart disease, at 27% risk',
+            1:'You have Typical Angina which puts you at a higher chance of causing a heart disease, at 82% risk',
+            2:'You have Atypical Angina which puts you at a higher chance of causing a heart disease, at 78% risk',
+            3:'You have Non-Anginal Pain which puts you at a moderately higher chance of causing a heart disease, at 69% risk'
+        },
+        'fbs':{
+            0:'You are not Diabetic which is healthier for your heart',
+            1:'You are Diabetic, so we advice you to keep a check on it because high Diabetic levels can lead to a heart disease'
+        },
+        'exang':{
+            0:'You have no Exercise Induced Angina and are at a higher risk of having a heart disease, at 69% risk',
+            1:'You have Exercise Induced Angina and are at a lower risk of having a heart disease, at 23% risk'
+        },
+        'slope':{
+            0:'You have a Downsloping slope in the peak exercise ST segment which puts you at a moderate risk of having a heart disease, at 43% risk',
+            1:'You have a Flat slope in the peak exercise ST segment which puts you at a lower risk of having a heart disease, at 35% risk',
+            2:'You have a Upsloping slope in the peak exercise ST segment which puts you at a higher risk of having a heart disease, at 75% risk'
+        },
+        'thal':{
+            1:'You have a "Fixed Defect" Thalium Stress Test result which puts you at a lower risk of having a heart disease, at 33% risk',
+            2:'You have a "Normal" Thalium Stress Test result which puts you at a higher risk of having a heart disease, at 77% risk',
+            3:'You have a "Reversible Defect" Thalium Stress Test result which puts you at a lower risk of having a heart disease, at 23% risk'
+        },
+        'ca':{
+            0:'You have 0 colored vessels after Fluoroscopy which puts you at higher risk of having a heart disease, at 74% risk',
+            1:'You have 1 colored vessels after Fluoroscopy which puts you at lower risk of having a heart disease, at 32% risk',
+            2:'You have 2 colored vessels after Fluoroscopy which puts you at lower risk of having a heart disease, at 18% risk',
+            3:'You have 3 colored vessels after Fluoroscopy which puts you at lower risk of having a heart disease, at 15% risk'
+        }
+    }
+    return cat_feat[feature_name][feature_value]
+
+def report_cont(feat):
+    if feat=='chol':
+        if float(session['chol'])>200 and float(session['chol'])<=240:
+            return 'You have borderline high Cholesterol levels which puts you at a moderately high risk of having a heart disease'
+        elif float(session['chol']>240):
+            return 'You have high Cholesterol levels which puts you at a higher risk of having a heart disease'
+        else:
+            return 'You have normal Cholesterol levels which puts you at a lower risk of having a heart disease'
+    elif feat=='trestbps':
+        if float(session['trestbps'])>140:
+            return 'You have high Resting Blood Pressure which suggests that you have Hypertension'
+        else:
+            return 'You have normal Resting Blood Pressure which puts you at a low risk of having a heart disease'
+    elif feat=='thalach':
+        if float(session['thalach']>180):
+            return 'You have a very high Maximum Heart Rate levels (during exercise) which could be dangerous for your heart'
+        else:
+            return 'Your Maximum Heart Rate levels (during exercise) lie within a safe and normal range'
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY']='jaykumar'
@@ -88,6 +142,7 @@ loaded_model = joblib.load('heart_disease.sav')
 @app.route('/result')
 def prediction():
     content={}
+    reports={}
     content['thal'] = session['thal']
     content['exang'] = session['exang']
     content['cp'] = session['cp']
@@ -96,9 +151,16 @@ def prediction():
     content['oldpeak'] = session['oldpeak']
     content['slope'] = session['slope']
 
+    labels1=['cp','fbs','exang','slope','thal','ca']
+    labels2=['chol','trestbps','thalach']
+    for i in labels1:
+        reports[i]=report_cat(i,int(session[i]))
+    for i in labels2:
+        reports[i]=report_cont(i)
+
     results = make_predictions(loaded_model,content)
 
-    return render_template('result.html',results=results)
+    return render_template('result.html',results=results, reports = reports)
 
 # Plots for the analytical report
 plots = Plots()

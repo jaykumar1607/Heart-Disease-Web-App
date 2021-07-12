@@ -3,6 +3,7 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="../static/style.css">
+	<link rel="stylesheet" type="text/css" href="../static/table_style.css">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,8 +20,7 @@
     </nav>
     <hr>
 
-		<h1><center>Thank You!</center></h1>
-		<h1><center>Here is your analytical report:</center></h1>
+		<h1><center>Thank You for using Cardio-Fit!</center></h1>
 		<br>
 		<center><table>
 		 <tr>
@@ -32,8 +32,30 @@
 			 <td>{{results}}</td>
 		 </tr>
 		</table>
-		<center><image src='/plot_bp.png'>
-		<center><image src='/plot_chol.png'>
-		<center><image src='/plot_thalach.png'>
+		<br>
+		<h2><center>Here is your analytical report:</center></h2>
+		<br>
+		<ul>
+			<li>{{reports['chol']}}</li>
+			<center><image src='/plot_chol.png'>
+			<br><br><br>
+			<li>{{reports['trestbps']}}</li>
+			<center><image src='/plot_bp.png'>
+			<br><br><br>
+			<li>{{reports['thalach']}}</li>
+			<center><image src='/plot_thalach.png'>
+			<br><br><br>
+			<li>{{reports['cp']}}</li>
+			<li>{{reports['fps']}}</li>
+			<br><br>
+			<li>{{reports['exang']}}</li>
+			<br><br>
+			<li>{{reports['slope']}}</li>
+			<br><br>
+			<li>{{reports['thal']}}</li>
+			<br><br>
+			<li>{{reports['ca']}}</li>
+			<br><br>
+		</ul>
 </body>
 </html>

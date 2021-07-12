@@ -1,0 +1,14 @@
+table{
+    border: 2px solid lightgreen;
+    border-radius: 10px;
+    font-family: 'Calibri', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+th{
+    font-size:x-large;
+}
+
+th, td{
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
