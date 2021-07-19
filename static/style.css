@@ -1,11 +1,11 @@
-body{
-    margin-top: 25px;
-    margin-right: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ body{
+    font-family: 'Roboto Mono', monospace;
+    background-color: #EBD4CC;
 }
 
 .logo{
     padding-left: 50px;
+    padding-top: 25px;
 }
 ul{
     list-style-type: none;
@@ -17,20 +17,20 @@ hr{
 
 nav{
     display: flex;
-    float: right;
-    margin: 50px 50px 0 0;
+    margin: 25px 50px 0 50px;
     font-size: 18px;
+    background-color: #514945;
 }
 
 a.menu{
-    color: black;
+    color: white;
     text-decoration: none;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 15px;
 }
 
 a.menu:hover{
-    background-color: pink;
+    background-color: #894242;
+    color: white;
     transition: 0.5s;
 }
 

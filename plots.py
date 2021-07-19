@@ -9,7 +9,7 @@ df = pd.read_csv('heart.csv',names=index,header=0)
 colors_red = ["#331313", "#582626", '#9E1717', '#D35151', '#E9B4B4']
 colors_dark = ["#1F1F1F", "#313131", '#636363', '#AEAEAE', '#DADADA']
 
-class Plots:
+class Plots():
     def chol_plot(self,inp):
         fig,ax = plt.subplots(figsize=(10,4))
 

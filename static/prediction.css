@@ -1,0 +1,29 @@
+#heading{                         /*Form Heading*/  
+    background-color: white;
+    opacity: 0.75;
+    border-radius: 10px;
+}
+h1, h2{                            /*Form Heading*/
+    text-align: center;
+}
+.fill{                             /*Whole form*/
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#ele{                              /*Each field*/
+    padding-left: 10vh;
+    background-color: white;
+    opacity: 0.75;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+#val{                               /*Values*/
+    float: right;
+    padding-right: 10vh;
+}

@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='prediction.css')}}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,53 +16,56 @@
     <nav>
         <a class="menu" href="/">Home</a>
         <a class="menu" href="./predict">Prediction</a>
+        <a class="menu" href="/blog">Blog</a>
         <a class="menu" href="./about">About Us</a>
     </nav>
-    <hr>
-    <h1>
-        <center>Heart Disease Prediction</center>
+    <br>
+    <div class="fill">
+    <div id="heading"><h1>
+        Heart Disease Prediction
     </h1>
     <br>
     <h2>
-        <center>Please enter your test details below:</center>
-    </h2>
+        Please enter your test details below:
+    </h2></div>
     <br>
-    <form method="POST">
-        <center>
+    <form method="POST" id="values">
+            <br>
             {# This hidden_tag is a CSRF security feature. #}
             {{ form.hidden_tag() }}
-            <p>{{ form.name.label }} &emsp; {{form.name}}</p>
-            <br>
-            <p>{{ form.age.label }} &emsp; {{form.age}}</p>
-            <br>
-            <p>{{ form.sex.label}} &emsp; {{form.sex}}</p>
-            <br>
-            <p>{{form.cp.label}} &emsp; {{form.cp}}</p>
-            <br>
-            <p>{{form.trestbps.label}} &emsp; {{form.trestbps}}</p>
-            <br>
-            <p>{{form.chol.label}} &emsp; {{form.chol}}</p>
-            <br>
-            <p>{{form.fbs.label}} &emsp; {{form.fbs}}</p>
-            <br>
-            <p>{{form.restecg.label}} &emsp; {{form.restecg}}</p>
-            <br>
-            <p>{{form.thalach.label}} &emsp; {{form.thalach}}</p>
-            <br>
-            <p>{{form.exang.label}} &emsp; {{form.exang}}</p>
-            <br>
-            <p>{{form.oldpeak.label}} &emsp; {{form.oldpeak}}</p>
-            <br>
-            <p>{{form.slope.label}} &emsp; {{form.slope}}</p>
-            <br>
-            <p>{{form.thal.label}} &emsp; {{form.thal}}</p>
-            <br>
-            <p>{{form.ca.label}} &emsp; {{form.ca}}</p>
-            <br>
-            <h2>{{ form.submit() }}</h2>
-            <br>
-        </center>
+            <p id="ele"><span id="key">{{ form.name.label }} </span> &emsp; <span id="val">{{form.name}}</span></p>
+            
+            <p id="ele"><span id="key">{{ form.age.label }} </span> &emsp; <span id="val"> {{form.age}}</span></p>
+            
+            <p id="ele"><span id="key">{{ form.sex.label}} </span> &emsp; <span id="val"> {{form.sex}}</span></p>
+            
+            <p id="ele"><span id="key">{{form.cp.label}} </span> &emsp; <span id="val">{{form.cp}}</span></p>
+            
+            <p id="ele"><span id="key">{{form.trestbps.label}} </span> &emsp; <span id="val">{{form.trestbps}}</span></p>
+            
+            <p id="ele"><span id="key">{{form.chol.label}} </span> &emsp; <span id="val">{{form.chol}}</span></p>
+            
+            <p id="ele"><span id="key">{{form.fbs.label}} </span> &emsp; <span id="val">{{form.fbs}}</span></p>
+            
+            <p id="ele"><span id="key">{{form.restecg.label}} </span> &emsp; <span id="val">{{form.restecg}}</span></p>
+            
+            <p id="ele"><span id="key">{{form.thalach.label}} </span> &emsp; <span id="val">{{form.thalach}}</span></p>
+            
+            <p id="ele"><span id="key">{{form.exang.label}} </span> &emsp; <span id="val">{{form.exang}}</span></p>
+            
+            <p id="ele"><span id="key">{{form.oldpeak.label}} </span> &emsp; <span id="val">{{form.oldpeak}}</span></p>
+            
+            <p id="ele"><span id="key">{{form.slope.label}} </span> &emsp; <span id="val">{{form.slope}}</span></p>
+            
+            <p id="ele"><span id="key">{{form.thal.label}} </span> &emsp; <span id="val">{{form.thal}}</span></p>
+            
+            <p id="ele"><span id="key">{{form.ca.label}} </span> &emsp; <span id="val">{{form.ca}}</span></p>
+            
+            <h2 class="submit">{{ form.submit() }}</h2>
+            
+        
     </form>
+</div>
 </body>
 
 </html>

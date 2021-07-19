@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" type="text/css" href="../static/style.css">
-	<link rel="stylesheet" type="text/css" href="../static/table_style.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='table_style.css')}}">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,18 +11,19 @@
 	<title>Cardio - Prediction - Results</title>
 </head>
 
-<body>
+<body class="trial">
 	<a href="./"><img class="logo" src="../static/logo2.png"></a>
     <nav>
         <a class="menu" href="/">Home</a>
         <a class="menu" href="./predict">Prediction</a>
+		<a class="menu" href="/blog">Blog</a>
         <a class="menu" href="./about">About Us</a>
     </nav>
-    <hr>
-
-		<h1><center>Thank You for using Cardio-Fit!</center></h1>
+		<h1>
+		<center>Thank You for using Cardio-Fit!</center></h1>
 		<br>
-		<center><table>
+		<center>
+		<table id="restable">
 		 <tr>
 			 <th>Name</th>
 			 <th>Result</th>
@@ -58,4 +59,5 @@
 			<br><br>
 		</ul>
 </body>
+
 </html>
