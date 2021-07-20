@@ -1,3 +1,12 @@
+body{
+    margin-bottom: 10px;
+}
+
+form{
+    font-size: 20px;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+
 #heading{                         /*Form Heading*/  
     background-color: white;
     opacity: 0.75;
@@ -16,14 +25,20 @@ h1, h2{                            /*Form Heading*/
 
 #ele{                              /*Each field*/
     padding-left: 10vh;
-    background-color: white;
     opacity: 0.75;
     border-radius: 10px;
     padding: 20px;
 }
 
+#key{
+    background-color: white;
+}
 
 #val{                               /*Values*/
     float: right;
     padding-right: 10vh;
+}
+
+.submitted{
+    pointer-events: none;
 }

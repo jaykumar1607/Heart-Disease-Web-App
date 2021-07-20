@@ -1,71 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Cardio-Fit: Prediction
+{% endblock %}
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='style.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='prediction.css')}}">
+    {% block styles %}
+    {{super()}}
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='prediction.css') }}">
+    <link rel="stylesheet" type="text/css" href=" {{ url_for('static', filename='popup.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    {% endblock %}
+    {% block metas %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardio - Prediction</title>
+    {% endblock %}
 </head>
 
-<body>
-    <a href="./"><img class="logo" src="../static/logo2.png"></a>
-    <nav>
-        <a class="menu" href="/">Home</a>
-        <a class="menu" href="./predict">Prediction</a>
-        <a class="menu" href="/blog">Blog</a>
-        <a class="menu" href="./about">About Us</a>
-    </nav>
-    <br>
-    <div class="fill">
-    <div id="heading"><h1>
-        Heart Disease Prediction
-    </h1>
-    <br>
-    <h2>
-        Please enter your test details below:
-    </h2></div>
+{% block content %}
+<a href="./"><img class="logo" src="../static/logo2.png"></a>
+<nav>
+    <a class="menu" href="/">Home</a>
+    <a class="menu" href="./predict">Prediction</a>
+    <a class="menu" href="/blog">Blog</a>
+    <a class="menu" href="./about">About Us</a>
+</nav>
+<br>
+<div class="fill">
+    <div id="heading">
+        <h1>
+            Heart Disease Prediction
+        </h1>
+        <br>
+        <h2>
+            Please enter your test details below:
+        </h2>
+    </div>
     <br>
     <form method="POST" id="values">
-            <br>
-            {# This hidden_tag is a CSRF security feature. #}
-            {{ form.hidden_tag() }}
-            <p id="ele"><span id="key">{{ form.name.label }} </span> &emsp; <span id="val">{{form.name}}</span></p>
-            
-            <p id="ele"><span id="key">{{ form.age.label }} </span> &emsp; <span id="val"> {{form.age}}</span></p>
-            
-            <p id="ele"><span id="key">{{ form.sex.label}} </span> &emsp; <span id="val"> {{form.sex}}</span></p>
-            
-            <p id="ele"><span id="key">{{form.cp.label}} </span> &emsp; <span id="val">{{form.cp}}</span></p>
-            
-            <p id="ele"><span id="key">{{form.trestbps.label}} </span> &emsp; <span id="val">{{form.trestbps}}</span></p>
-            
-            <p id="ele"><span id="key">{{form.chol.label}} </span> &emsp; <span id="val">{{form.chol}}</span></p>
-            
-            <p id="ele"><span id="key">{{form.fbs.label}} </span> &emsp; <span id="val">{{form.fbs}}</span></p>
-            
-            <p id="ele"><span id="key">{{form.restecg.label}} </span> &emsp; <span id="val">{{form.restecg}}</span></p>
-            
-            <p id="ele"><span id="key">{{form.thalach.label}} </span> &emsp; <span id="val">{{form.thalach}}</span></p>
-            
-            <p id="ele"><span id="key">{{form.exang.label}} </span> &emsp; <span id="val">{{form.exang}}</span></p>
-            
-            <p id="ele"><span id="key">{{form.oldpeak.label}} </span> &emsp; <span id="val">{{form.oldpeak}}</span></p>
-            
-            <p id="ele"><span id="key">{{form.slope.label}} </span> &emsp; <span id="val">{{form.slope}}</span></p>
-            
-            <p id="ele"><span id="key">{{form.thal.label}} </span> &emsp; <span id="val">{{form.thal}}</span></p>
-            
-            <p id="ele"><span id="key">{{form.ca.label}} </span> &emsp; <span id="val">{{form.ca}}</span></p>
-            
-            <h2 class="submit">{{ form.submit() }}</h2>
-            
+        <br>
+        {# This hidden_tag is a CSRF security feature. #}
+        {{ form.csrf_token }}
         
+        <p id="ele"><span id="key">{{ wtf.form_field(form.name) }} </span></p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.age) }} </span> </p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.sex) }} </span></p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.cp) }} </span></p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.trestbps) }} </span></p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.chol) }} </span></p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.fbs) }} </span></p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.restecg) }} </span></p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.thalach) }} </span></p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.exang) }} </span></p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.oldpeak) }} </span></p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.slope) }} </span></p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.thal) }} </span></p>
+
+        <p id="ele"><span id="key">{{ wtf.form_field(form.ca) }} </span></p>
+
+        <center><input id="submission" class="btn btn-success" type="submit"></center>
+
+
     </form>
 </div>
-</body>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+    var fields = document.querySelectorAll('#key');
+    if (fields == null) {
+        var btn = document.getElementById('submission');
+        btn.classList.add('submitted');
+    }
+    function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
+</script>
+{% endblock %}
 
 </html>
