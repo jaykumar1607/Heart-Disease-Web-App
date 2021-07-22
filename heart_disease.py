@@ -117,6 +117,14 @@ def blog():
 def about():
     return render_template('about.html')
 
+@app.route('/dataset')
+def dataset():
+    return render_template('dataset.html')
+
+@app.route('/heartblog')
+def heartblog():
+    return render_template('heartblog.html')
+
 @app.route('/predict',methods=['GET','POST'])
 def home():
 

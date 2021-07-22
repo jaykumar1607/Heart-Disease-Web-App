@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/blog.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
+    <title>Cardio-Fit: Blog</title>
 </head>
 
 <body>
@@ -15,9 +16,49 @@
     <nav>
         <a class="menu" href="/">Home</a>
         <a class="menu" href="./predict">Prediction</a>
-        <a class="menu" href="/blog">Blog</a>
+        <a class="menu act" href="/blog">Blog</a>
         <a class="menu" href="./about">About Us</a>
     </nav>
-    <h1><center>WORK IN PROGRESS!</center></h1>
+    <a href="./dataset">
+        <div class="write">
+            <div class="section">
+                <h1 class="heading">About the Dataset</h1>
+                <center><img class="blog1" src="{{ url_for('static', filename='thumbnail.png') }}"></center>
+                <p class="written one">
+                    The dataset that we’ve used to build this application was created and maintained by the University
+                    of
+                    California Irvine in the United States of America. The UCI have their own Machine Learning
+                    Repository
+                    and they currently maintain 588 data sets as a service to the machine learning community. Here, you
+                    can
+                    donate and find data sets used by millions of people all around the world!
+                </p>
+                <h1 class="heading two">Click to Read more...</h1>
+            </div>
+        </div>
+    </a>
+    <a href="./heartblog">
+    <div class="write">
+        <div class="section">
+            <h1 class="heading">Heart Diseases and their Preventions</h1>
+            <center><img class="blog2" src="{{ url_for('static', filename='aadmi') }}" height="400" width="600">
+            </center>
+            <p class="written one">
+                Heart disease refers to any condition affecting the heart. There are many types, some of which are
+                preventable.
+
+                Unlike cardiovascular disease, which includes problems with the entire circulatory system, heart disease
+                affects only the heart.
+            </p>
+            <h1 class="heading two">Click to Read more...</h1>
+        </div>
+    </div>
+    </a>
+    <center>
+        <footer id="foot">
+            Made with 💖 🧠 💪 by Jay Kumar and Nishant Jha
+        </footer>
+    </center>
 </body>
+
 </html>

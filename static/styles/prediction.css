@@ -9,8 +9,8 @@ form{
 
 #heading{                         /*Form Heading*/  
     background-color: white;
-    opacity: 0.75;
     border-radius: 10px;
+    font-family: Arial;
 }
 h1, h2{                            /*Form Heading*/
     text-align: center;

@@ -2,20 +2,20 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='slides.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/slides.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardio</title>
+    <title>Cardio-Fit</title>
 </head>
 
 <body>
     <a href="./"><img class="logo" src="../static/logo2.png"></a>
     <br>
     <nav>
-        <a class="menu" href="/">Home</a>
+        <a class="menu act" href="/">Home</a>
         <a class="menu" href="./predict">Prediction</a>
         <a class="menu" href="/blog">Blog</a>
         <a class="menu" href="./about">About Us</a>
@@ -64,21 +64,21 @@
     <!-- Gallery container -->
     <center>
     <div class="gallery">
-        <a target="_blank" href="./predict">
+        <a class="gal" target="_blank" href="./predict">
             <img src="../static/heartbeat.gif" alt="Prediction" width="600" height="400">
         </a>
-        <div class="desc">Click here to check if you have risk of any heart disease</div>
+        <div class="desc">Click on the image to check if you have risk of any heart disease</div>
     </div>
 
     <div class="gallery">
-        <a target="_blank" href="">
+        <a class="gal" target="_blank" href="./dataset">
             <img src="../static/heart.gif" alt="Dataset Used" width="600" height="400">
         </a>
         <div class="desc">About the Dataset used</div>
     </div>
     
     <div class="gallery">
-        <a target="_blank" href="">
+        <a class="gal" target="_blank" href="">
             <img src="../static/simp-tom.gif" alt="Heart Diseases" width="600" height="400">
         </a>
         <div class="desc">Heart diseases can be serious. Click to know more about them.</div>
@@ -86,7 +86,7 @@
     </center>
     <center>
     <footer id="foot">
-        &copy; Jay Kumar and Nishant Jha 2021.
+        Made with 💖 🧠 💪 by Jay Kumar and Nishant Jha
     </footer>
     </center>
 </body>

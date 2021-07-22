@@ -1,15 +1,13 @@
  body{
     font-family: 'Roboto Mono', monospace;
-    background-color: #EBD4CC;
+    background-color: rgb(235, 235, 235);
 }
 
 .logo{
     padding-left: 50px;
     padding-top: 25px;
 }
-ul{
-    list-style-type: none;
-}
+
 hr{
     opacity: 0.6;
     color: dimgray;
@@ -19,7 +17,11 @@ nav{
     display: flex;
     margin: 25px 50px 0 50px;
     font-size: 18px;
-    background-color: #514945;
+    background-color: #282A35!important;
+}
+
+.act{
+    background-color: #04AA6D;
 }
 
 a.menu{
@@ -29,16 +31,18 @@ a.menu{
 }
 
 a.menu:hover{
-    background-color: #894242;
-    color: white;
+    background-color: #bcdbd0;
     transition: 0.5s;
+    color: black;
 }
 
 footer{
-    position: fixed;
-    padding: 10px 10px 0px 10px;
+    position: static;
     bottom: 0;
-    width: 100%;
+    margin: 7% 0 2% 0;
+    color: white;
+    max-width: max-content;
     /* Height of the footer*/
-    height: 40px;
+    padding: 10px;
+    background-color: #282A35!important;
 }

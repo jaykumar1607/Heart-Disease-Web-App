@@ -1,0 +1,43 @@
+nav{
+    background-color: #6e6e6e;
+}
+
+
+.write{
+    margin: 25px 200px 0 200px;
+    background-color: #bcdbd0;
+    border: solid grey 1px;
+    border-radius: 5px;
+    color: black;   
+}
+
+.write:hover{
+    background-color: #04AA6D;
+    transition: 0.1s;
+    cursor: pointer;
+    color: white;
+}
+
+.section{
+    margin: 5vh;
+}
+
+.blog1, .blog2{
+    padding: 2%;
+}
+
+a{
+    text-decoration: none;
+}
+.heading{
+    font-size: 40px;
+}
+
+
+.written{
+    font-size:20px;
+    display: inline;
+    font-family:'Times New Roman', Times, serif;
+    text-align: right;
+    width:30%;
+}
