@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/about.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,14 +11,27 @@
     <title>About us</title>
 </head>
 
-<body>
-    <a href="./"><img class="logo" src="../static/logo2.png"></a>
+<body onload="document.body.style.opacity='1'">
     <nav>
-        <a class="menu" href="/">Home</a>
-        <a class="menu" href="./predict">Prediction</a>
-        <a class="menu" href="/blog">Blog</a>
+        <a class="menu titl non" href="/"><b>💓CARDIO-FIT</b></a>
+        <a class="menu non" href="./predict">Prediction</a>
+        <a class="menu non" href="/blog">Blog</a>
         <a class="menu act" href="./about">About Us</a>
     </nav>
-    <h1><center>WORK IN PROGRESS!</center></h1>
+    <center>
+    <div class="bmonke">
+        <img class="dp" src="{{ url_for('static', filename='./about/jay.jpg') }}">
+        <h1>Jay Kumar</h1>
+    </div>
+    <div class="monke">
+        <img class="dp two" src="{{ url_for('static', filename='./about/nkj.jpg') }}">
+        <h1>Nishant Jha</h1>
+    </div>
+    </center>
+    <center>
+        <footer id="foot">
+            Made with 💖 🧠 💪 by Jay Kumar and Nishant Jha
+        </footer>
+    </center>
 </body>
 </html>

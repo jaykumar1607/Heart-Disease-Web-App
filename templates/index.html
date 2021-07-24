@@ -3,91 +3,62 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/slides.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/home.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardio-Fit</title>
 </head>
 
 <body>
-    <a href="./"><img class="logo" src="../static/logo2.png"></a>
-    <br>
     <nav>
-        <a class="menu act" href="/">Home</a>
-        <a class="menu" href="./predict">Prediction</a>
-        <a class="menu" href="/blog">Blog</a>
-        <a class="menu" href="./about">About Us</a>
+        <a class="menu act titl" href="/"><b>💓CARDIO-FIT</b></a>
+        <a class="menu non" href="./predict">Prediction</a>
+        <a class="menu non" href="/blog">Blog</a>
+        <a class="menu non" href="./about">About Us</a>
     </nav>
-    <!-- Introduction Animation
-    <div class="intro">
-        <div class="animated-bar"></div>
-      
-        <div class="slide slide-a">
-           <div class="slide-content">
-              <p class="slide-a-child">webdevtrick.com</p>
-              <h1 class="slide-a-child">This Is Web Dev Trick Blog</h1>
-              <p class="slide-a-child">This is New and Fresh Blog</p>
-           </div>
-        </div>
-      
-        <div class="slide slide-b">
-           <div class="slide-content">
-              <h2 class="slide-b-child">What We Share?</h2>
-              <p class="slide-b-child">Tutorial, Tips, Tricks and Source Code</p>
-              <p class="slide-b-child">About Web And Graphic Design, Development &amp; SEO</p>
-           </div>
-        </div>
-      
-        <div class="slide slide-c">
-           <div class="slide-content">
-              <h2 class="slide-c-child">This Blog Is For</h2>
-              <ul>
-                 <li class="slide-c-child"><p>Web Designer</p></li>
-                 <li class="slide-c-child"><p>Graphic Designer</p></li>
-                 <li class="slide-c-child"><p>Web Developer</p></li>
-                 <li class="slide-c-child"><p>SEO</p></li>
-              </ul>
-           </div>
-        </div>
-      
-        <div class="slide slide-d">
-           <div class="slide-content">
-              <h2 class="slide-d-child">Keep Visiting This Blog</h2>
-              <p class="slide-d-child">Our Blog -<a href="http://mohamdhasan.pro/" target="_blank"> webdevtrick.com</a></p>
-              <button class="slide-d-child replay">Reload</button>
-           </div>
-        </div>
-      
-     </div> -->
-    <!-- Gallery container -->
+    <div class="banner">
+        <p class="description">
+            <i class="boxy">
+                <i class="descban" id="descban"><img class="descban logo"
+                        src="{{ url_for('static', filename='./home/logo2.png') }}" width="499" height="140"></i><br><br>
+                <i class="descdesc" id="descdesc">Cardio-Fit is a Machine Learning based Web Application. It
+                    has
+                    90% accurate results. But a specialist is still recommended if you think you have a risk of heart
+                    disease.
+                </i>
+            </i>
+        </p>
+    </div>
     <center>
-    <div class="gallery">
-        <a class="gal" target="_blank" href="./predict">
-            <img src="../static/heartbeat.gif" alt="Prediction" width="600" height="400">
-        </a>
-        <div class="desc">Click on the image to check if you have risk of any heart disease</div>
-    </div>
+        <div class="gallery">
+            <a class="gal" target="_blank" href="./predict">
+                <img src="{{ url_for('static', filename='./home/predict.png')}}" alt="Prediction" width="600"
+                    height="400">
 
-    <div class="gallery">
-        <a class="gal" target="_blank" href="./dataset">
-            <img src="../static/heart.gif" alt="Dataset Used" width="600" height="400">
-        </a>
-        <div class="desc">About the Dataset used</div>
-    </div>
-    
-    <div class="gallery">
-        <a class="gal" target="_blank" href="">
-            <img src="../static/simp-tom.gif" alt="Heart Diseases" width="600" height="400">
-        </a>
-        <div class="desc">Heart diseases can be serious. Click to know more about them.</div>
-    </div>
+                <div class="desc">Click to check if you have risk of any heart disease</div>
+            </a>
+        </div>
+
+        <div class="gallery">
+            <a class="gal" target="_blank" href="./dataset">
+                <img src="{{ url_for('static', filename='./home/UCI.png')}}" alt="Dataset Used" width="600"
+                    height="400">
+                <div class="desc">About the Dataset used</div>
+            </a>
+
+        </div>
+
+        <div class="gallery">
+            <a class="gal" target="_blank" href="">
+                <img src="{{ url_for('static', filename='./home/know.png')}}" alt="Heart Diseases" width="600"
+                    height="400">
+                <div class="desc">Heart diseases can be serious. Click to know more about them.</div>
+            </a>
+        </div>
     </center>
     <center>
-    <footer id="foot">
-        Made with 💖 🧠 💪 by Jay Kumar and Nishant Jha
-    </footer>
+        <footer id="foot">
+            Made with 💖 🧠 💪 by Jay Kumar and Nishant Jha
+        </footer>
     </center>
 </body>
 <script type="text/javascript" src="{{ url_for('static', filename='intro.js') }}"></script>

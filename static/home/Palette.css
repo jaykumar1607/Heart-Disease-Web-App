@@ -1,0 +1,44 @@
+/* CSS HEX */
+
+    {
+    --mulled-wine: #434167;
+    --mischka: #dedee3;
+    --polo-blue: #8593ca;
+    --deluge: #8455ab;
+    --cold-purple: #aea0dc;
+    --macaroni-and cheese: #fbbc8b;
+    --deep-blush: #e0739a;
+    --blue-bell: #9894d1;
+    --soft-amber: #d8c6b9;
+    --sandstone: #7d6d5e;
+}
+
+/* SCSS HEX */
+
+    {
+    $mulled-wine: #434167;
+    $mischka: #dedee3;
+    $polo-blue: #8593ca;
+    $deluge: #8455ab;
+    $cold-purple: #aea0dc;
+    $macaroni-and cheese: #fbbc8b;
+    $deep-blush: #e0739a;
+    $blue-bell: #9894d1;
+    $soft-amber: #d8c6b9;
+    $sandstone: #7d6d5e;
+}
+
+/* SCSS RGB */
+
+    {
+    --mulled-wine: rgba(67, 65, 103, 1);
+    --mischka: rgba(222, 222, 227, 1);
+    --polo-blue: rgba(133, 147, 202, 1);
+    --deluge: rgba(132, 85, 171, 1);
+    --cold-purple: rgba(174, 160, 220, 1);
+    --macaroni-and cheese: rgba(251, 188, 139, 1);
+    --deep-blush: rgba(224, 115, 154, 1);
+    --blue-bell: rgba(152, 148, 209, 1);
+    --soft-amber: rgba(216, 198, 185, 1);
+    --sandstone: rgba(125, 109, 94, 1);
+}

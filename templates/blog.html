@@ -11,19 +11,18 @@
     <title>Cardio-Fit: Blog</title>
 </head>
 
-<body>
-    <a href="./"><img class="logo" src="../static/logo2.png"></a>
+<body onload="document.body.style.opacity='1'">
     <nav>
-        <a class="menu" href="/">Home</a>
-        <a class="menu" href="./predict">Prediction</a>
+        <a class="menu titl non" href="/"><b>💓CARDIO-FIT</b></a>
+        <a class="menu non" href="./predict">Prediction</a>
         <a class="menu act" href="/blog">Blog</a>
-        <a class="menu" href="./about">About Us</a>
+        <a class="menu non" href="./about">About Us</a>
     </nav>
-    <a href="./dataset">
+    <div class="content">
         <div class="write">
             <div class="section">
                 <h1 class="heading">About the Dataset</h1>
-                <center><img class="blog1" src="{{ url_for('static', filename='thumbnail.png') }}"></center>
+                <center><img class="blog1" src="{{ url_for('static', filename='./blog/thumbnail.png') }}"></center>
                 <p class="written one">
                     The dataset that we’ve used to build this application was created and maintained by the University
                     of
@@ -33,27 +32,28 @@
                     can
                     donate and find data sets used by millions of people all around the world!
                 </p>
-                <h1 class="heading two">Click to Read more...</h1>
+                <h1 class="heading two"><a class="todata" href="./dataset">Click to Read more...</a></h1>
             </div>
         </div>
-    </a>
-    <a href="./heartblog">
-    <div class="write">
-        <div class="section">
-            <h1 class="heading">Heart Diseases and their Preventions</h1>
-            <center><img class="blog2" src="{{ url_for('static', filename='aadmi') }}" height="400" width="600">
-            </center>
-            <p class="written one">
-                Heart disease refers to any condition affecting the heart. There are many types, some of which are
-                preventable.
 
-                Unlike cardiovascular disease, which includes problems with the entire circulatory system, heart disease
-                affects only the heart.
-            </p>
-            <h1 class="heading two">Click to Read more...</h1>
+        <div class="write">
+            <div class="section">
+                <h1 class="heading">Heart Diseases and their Preventions</h1>
+                <center><img class="blog2" src="{{ url_for('static', filename='./blog/aadmi') }}" height="400"
+                        width="600">
+                </center>
+                <p class="written one">
+                    Heart disease refers to any condition affecting the heart. There are many types, some of which are
+                    preventable.
+
+                    Unlike cardiovascular disease, which includes problems with the entire circulatory system, heart
+                    disease
+                    affects only the heart.
+                </p>
+                <h1 class="heading two"><a class="toheart" href="./heartblog">Click to Read more...</a></h1>
+            </div>
         </div>
     </div>
-    </a>
     <center>
         <footer id="foot">
             Made with 💖 🧠 💪 by Jay Kumar and Nishant Jha

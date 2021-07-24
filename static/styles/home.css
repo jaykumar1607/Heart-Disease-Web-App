@@ -1,0 +1,84 @@
+div.gallery {
+    margin: 100px 12px 12px 12px;
+    border-radius: 10px;
+    width: 30%;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+div.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 7px 7px 5px grey;
+}
+
+div.gallery img:hover {
+    border-radius: 10px;
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+div.desc {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    color: grey;
+    border-bottom: 2px solid grey;
+    background-color: #dedee3;
+    height: 30px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.pic {
+    width: 20%;
+    float: right;
+    background-color: inherit;
+    margin: 70px 500px 200px 100px;
+}
+
+.banner {
+    background-color: white;
+    background-image: url('../home/bannerpurple.jpg');
+    background-size: cover;
+    background-position: 250px;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    height: 700px;
+    color: white;
+}
+
+.description {
+    color: black;
+    text-align: left;
+    margin-left: 100px;
+    margin-right: 1300px;
+    margin-top: 250px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+
+.descban{
+    color: grey;
+    font-size: 24px;
+    font-family:'Segoe UI';
+}
+
+.wlcm{
+    box-shadow: 10px 10px 5px grey;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+.descdesc{
+    color: grey;
+    font-size: 24px;
+    font-family: 'Segoe UI';
+
+}
+

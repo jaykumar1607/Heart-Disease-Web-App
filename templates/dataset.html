@@ -11,14 +11,13 @@
     <title>Cardio-Fit: About The Dataset</title>
 </head>
 
-<body>
-    <a href="./"><img class="logo" src="../static/logo2.png"></a>
+<body onload="document.body.style.opacity='1'">
     <br>
     <nav>
-        <a class="menu" href="/">Home</a>
-        <a class="menu" href="./predict">Prediction</a>
+        <a class="menu titl non" href="/"><b>💓CARDIO-FIT</b></a>
+        <a class="menu non" href="./predict">Prediction</a>
         <a class="menu act" href="/blog">Blog</a>
-        <a class="menu" href="./about">About Us</a>
+        <a class="menu non" href="./about">About Us</a>
     </nav>
     <div class="write">
         <div class="section">
@@ -27,7 +26,7 @@
                 The dataset that we’ve used to build this application was created and maintained by the University of
                 California Irvine in the United States of America.
             </p>
-            <center><img src="{{ url_for('static', filename='dataset.jpg') }}"></center>
+            <center><img src="{{ url_for('static', filename='./dataset/dataset.jpg') }}"></center>
             <p class="written two">
                 The UCI have their own Machine Learning Repository and they currently maintain 588 data sets as a
                 service to the machine learning community. Here, you can donate and find data sets used by millions of
@@ -55,8 +54,8 @@
                 dataset.
             </p>
             <center>
-                <img src="{{ url_for('static', filename='svage.png') }}">
-                <img src="{{ url_for('static', filename='svagetwo.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/svage.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/svagetwo.png') }}">
             </center>
             <h3 class="heading sub three">Chest Pain</h3>
             <p class="written seven">
@@ -125,8 +124,8 @@
                 our dataset.
             </p>
             <center>
-                <img src="{{ url_for('static', filename='rbpd.png') }}">
-                <img src="{{ url_for('static', filename='rbpdtwo.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/rbpd.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/rbpdtwo.png') }}">
             </center>
             <h3 class="heading sub six">Serum Cholesterol Levels</h3>
             <p class="written ten">
@@ -146,8 +145,8 @@
                 dataset that we’ve used:
             </p>
             <center>
-                <img src="{{ url_for('static', filename='scld.png') }}">
-                <img src="{{ url_for('static', filename='scldtwo.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/scld.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/scldtwo.png') }}">
             </center>
             <h3 class="heading sub seven">Maximum Heart Rate</h3>
             <p class="written eleven">
@@ -158,8 +157,8 @@
                 In the figure below, we can look at the Maximum Heart Rate Distribution of the patients in the dataset:
             </p>
             <center>
-                <img src="{{ url_for('static', filename='maxheart.png') }}">
-                <img src="{{ url_for('static', filename='maxhearttwo.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/maxheart.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/maxhearttwo.png') }}">
             </center>
             <h3 class="heading sub eight">Exercise Induced Angina</h3>
             <p class="written twelve">
@@ -208,7 +207,7 @@
                 dataset.
             </p>
             <center>
-                <img src="{{ url_for('static', filename='oldpeak.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/oldpeak.png') }}">
             </center>
             <h3 class="heading sub twelve">Number of vessels colored in Fluoroscopy</h3>
             <p class="written sixteen">
@@ -237,7 +236,7 @@
                 </ol>
             </p>
             <center>
-                <img src="{{ url_for('static', filename='featpie.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/featpie.png') }}">
             </center>
         </div>
     </div>
