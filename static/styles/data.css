@@ -1,15 +1,19 @@
 
-nav{
-    background-color: #6e6e6e;
+.content{
+    display: block;
+    padding-top: 50px;
+    width: 60%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-
 .write{
-    margin: 25px 200px 0 200px;
     background-color: white;
     border: solid grey 1px;
     border-radius: 5px;
-    box-shadow: 10px 10px 10px grey;
+    color: black;
+    box-shadow: 10px 10px 5px grey;
+    margin-top: 50px;
 }
 
 .section{

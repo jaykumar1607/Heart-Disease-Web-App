@@ -7,14 +7,20 @@ body {
     background-color: rgb(235, 235, 235);
 }
 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
 a {
     text-decoration: none;
 }
 
-hr {
-    opacity: 0.6;
-    color: dimgray;
-}
+
 
 nav {
     position: fixed;
@@ -43,7 +49,7 @@ a.menu {
     text-decoration: none;
 }
 
-a.menu:hover {
+a.non:hover {
     background-color: #aea0dc;
     transition: 0.5s;
     color: black;

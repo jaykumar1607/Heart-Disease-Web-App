@@ -1,9 +1,38 @@
-.dp{
+.dp {
     border-radius: 50%;
-    width: 10%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    padding: 25px 25px 10px 25px;
+    text-align: center;
+    justify-content: center;
 }
 
-.bmonke{
-    display: inline;
+
+.info {
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    width: 50%; 
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
+.bmonke, .monke{
+    border: 1px solid grey;
+    border-radius: 2%;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: white;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.sub{
+    font-weight: 300;
+    color: grey;
+}
+.infotext{
+    padding-left: 1%;
+    padding-right: 2%;
+}

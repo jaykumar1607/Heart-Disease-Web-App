@@ -1,15 +1,21 @@
 .content{
-    
+    display: block;
+    padding-top: 50px;
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .write {
-    background-color: #ebebf3;
+    background-color: white;
     border: solid grey 1px;
     border-radius: 5px;
     color: black;
     box-shadow: 10px 10px 5px grey;
+    margin-top: 50px;
 }
 a.todata:visited, a.toheart:visited{
-    color:black;
+    color:white;
 }
 
 
@@ -20,6 +26,9 @@ a.todata:visited, a.toheart:visited{
 .blog1,
 .blog2 {
     padding: 2%;
+    height: 400px;
+    width: 1000px;
+    object-fit: cover;
 }
 
 .heading {
@@ -29,7 +38,27 @@ a.todata:visited, a.toheart:visited{
 .written {
     font-size: 20px;
     display: inline;
-    font-family: 'Times New Roman', Times, serif;
     text-align: right;
     width: 30%;
+}
+
+.more{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 20px;
+    display: block;
+    width: 50vh;
+    border: 1px solid grey;
+    background-color: #8455ab;
+    font-size: 3vh;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.more:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+.toheart, .todata{
+    color: white;
 }

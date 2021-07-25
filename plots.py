@@ -8,13 +8,13 @@ df = pd.read_csv('heart.csv',names=index,header=0)
 
 colors_red = ["#331313", "#582626", '#9E1717', '#D35151', '#E9B4B4']
 colors_dark = ["#1F1F1F", "#313131", '#636363', '#AEAEAE', '#DADADA']
-
+colors_purple = ["#554f8a", "#8a94cd", "#ada3e0", "#ab92c3", "#ebebf3"]
 class Plots():
     def chol_plot(self,inp):
-        fig,ax = plt.subplots(figsize=(10,4))
-
+        fig,ax = plt.subplots(figsize=(10,4),facecolor="#ebebeb")
+        ax.set_facecolor("#ebebeb")
         # Making the KDE plot
-        df['chol'].plot.kde(ls='--',color=colors_red[2],ax=ax)
+        df['chol'].plot.kde(ls='--',color=colors_purple[0],ax=ax)
 
         # Removing the axis
         ax.spines['left'].set_color(None)
@@ -33,8 +33,8 @@ class Plots():
         mask2 = x>=240
         x1, y1 = x[mask1], y[mask1]
         x2,y2 = x[mask2],y[mask2]
-        ax.fill_between(x1, y1, alpha=0.5, facecolor=colors_red[3])
-        ax.fill_between(x2, y2, alpha=0.5, facecolor=colors_red[2])
+        ax.fill_between(x1, y1, alpha=0.5, facecolor=colors_purple[3])
+        ax.fill_between(x2, y2, alpha=0.5, facecolor=colors_purple[1])
 
         # y values wrt to x
         vals = pd.DataFrame(y,index=np.round(x))
@@ -64,7 +64,7 @@ class Plots():
 
         fig,ax = plt.subplots(figsize=(10,4))
 
-        df['trestbps'].plot.kde(ls='--',color=colors_red[2],ax=ax)
+        df['trestbps'].plot.kde(ls='--',color=colors_purple[0],ax=ax)
 
         ax.spines['left'].set_color(None)
         ax.spines['top'].set_color(None)
@@ -78,7 +78,7 @@ class Plots():
         x,y = line.get_data()
         mask = x>140
         x1,y1 = x[mask],y[mask]
-        ax.fill_between(x1,y1,alpha=0.65,facecolor = colors_red[2])
+        ax.fill_between(x1,y1,alpha=0.7,facecolor = colors_purple[1])
 
         # y values wrt to x
         vals = pd.DataFrame(y,index=np.round(x))
@@ -100,7 +100,7 @@ class Plots():
     def thalach_plot(self,inp):
         fig,ax = plt.subplots(figsize=(10,4))
 
-        df['thalach'].plot.kde(ls='--',color=colors_red[2],ax=ax)
+        df['thalach'].plot.kde(ls='--',color=colors_purple[0],ax=ax)
 
         ax.spines['left'].set_color(None)
         ax.spines['top'].set_color(None)
@@ -114,7 +114,7 @@ class Plots():
         x,y = line.get_data()
         mask = x>180
         x1,y1 = x[mask],y[mask]
-        ax.fill_between(x1,y1,alpha=0.65,facecolor = colors_red[3])
+        ax.fill_between(x1,y1,alpha=0.7,facecolor = colors_purple[1])
 
         # y values wrt to x
         vals = pd.DataFrame(y,index=np.round(x))

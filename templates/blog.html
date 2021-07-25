@@ -22,6 +22,7 @@
         <div class="write">
             <div class="section">
                 <h1 class="heading">About the Dataset</h1>
+                <hr>
                 <center><img class="blog1" src="{{ url_for('static', filename='./blog/thumbnail.png') }}"></center>
                 <p class="written one">
                     The dataset that we’ve used to build this application was created and maintained by the University
@@ -32,15 +33,17 @@
                     can
                     donate and find data sets used by millions of people all around the world!
                 </p>
-                <h1 class="heading two"><a class="todata" href="./dataset">Click to Read more...</a></h1>
+                <div class="more">
+                    <a class="todata" href="./dataset">Click to Read more...</a>
+                </div>
             </div>
         </div>
 
         <div class="write">
             <div class="section">
                 <h1 class="heading">Heart Diseases and their Preventions</h1>
-                <center><img class="blog2" src="{{ url_for('static', filename='./blog/aadmi') }}" height="400"
-                        width="600">
+                <hr>
+                <center><img class="blog2" src="{{ url_for('static', filename='./blog/aadmi') }}">
                 </center>
                 <p class="written one">
                     Heart disease refers to any condition affecting the heart. There are many types, some of which are
@@ -50,7 +53,9 @@
                     disease
                     affects only the heart.
                 </p>
-                <h1 class="heading two"><a class="toheart" href="./heartblog">Click to Read more...</a></h1>
+                <div class="more">
+                    <a class="toheart" href="./heartblog">Click to Read more...</a>
+                </div>
             </div>
         </div>
     </div>

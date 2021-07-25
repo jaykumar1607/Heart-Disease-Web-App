@@ -19,14 +19,18 @@
         <a class="menu act" href="./about">About Us</a>
     </nav>
     <center>
-    <div class="bmonke">
-        <img class="dp" src="{{ url_for('static', filename='./about/jay.jpg') }}">
-        <h1>Jay Kumar</h1>
-    </div>
-    <div class="monke">
-        <img class="dp two" src="{{ url_for('static', filename='./about/nkj.jpg') }}">
-        <h1>Nishant Jha</h1>
-    </div>
+        <div class="info">
+            <div class="bmonke">
+                <img class="dp" src="{{ url_for('static', filename='./about/jay.jpg') }}">
+                <h1 class="infotext main one">Jay Kumar</h1>
+                <h2 class="infotext sub two">Data Science Enthusiast</h2>
+            </div>
+            <div class="monke">
+                <img class="dp two" src="{{ url_for('static', filename='./about/nkj3.jpg') }}">
+                <h1 class="infotext main two">Nishant Jha</h1>
+                <h2 class="infotext sub two">Web Development Enthusiast</h2>
+            </div>
+        </div>
     </center>
     <center>
         <footer id="foot">
@@ -34,4 +38,5 @@
         </footer>
     </center>
 </body>
+
 </html>

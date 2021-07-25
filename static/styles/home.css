@@ -52,8 +52,7 @@ div.desc {
     text-align: left;
     margin-left: 100px;
     margin-right: 1300px;
-    margin-top: 250px;
-    box-shadow: 2px 2px 5px grey;
+    margin-top: 200px;
 }
 
 
@@ -61,24 +60,18 @@ div.desc {
     color: grey;
     font-size: 24px;
     font-family:'Segoe UI';
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 .wlcm{
     box-shadow: 10px 10px 5px grey;
 }
 
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-}
+
 .descdesc{
     color: grey;
     font-size: 24px;
     font-family: 'Segoe UI';
-
 }
 
