@@ -27,8 +27,8 @@ a.todata:visited, a.toheart:visited{
 .blog2 {
     padding: 2%;
     height: 400px;
-    width: 1000px;
-    object-fit: cover;
+    width: 800px;
+    object-fit: contain;
 }
 
 .heading {

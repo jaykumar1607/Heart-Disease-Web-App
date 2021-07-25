@@ -73,9 +73,9 @@ Cardio-Fit: Prediction
         <p id="ele"><span id="key">{{ wtf.form_field(form.thal) }} </span></p>
 
         <p id="ele"><span id="key">{{ wtf.form_field(form.ca) }} </span></p>
-
-        <center><input id="submission" class="btn btn-success" type="submit"></center>
-
+        <br><br>
+        <center><input id="submission" class="btn btn-success" type="submit" value="Analyze"></center>
+        <br><br><br><br>
 
     </form>
 </div>
@@ -87,19 +87,5 @@ Cardio-Fit: Prediction
         Made with ❤️ by Jay and Nishant
     </footer>
 </center>
-{% block scripts %}
-{{ super() }}
-<script>
-    var fields = document.querySelectorAll('#key');
-    if (fields == null) {
-        var btn = document.getElementById('submission');
-        btn.classList.add('submitted');
-    }
-    function myFunction() {
-        var popup = document.getElementById("myPopup");
-        popup.classList.toggle("show");
-    }
-</script>
-{% endblock %}
 
 </html>

@@ -46,6 +46,7 @@ nav {
 }
 
 a.menu {
+    color:black !important;
     padding: 15px;
     text-decoration: none;
 }
