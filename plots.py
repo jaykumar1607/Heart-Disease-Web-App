@@ -11,8 +11,7 @@ colors_dark = ["#1F1F1F", "#313131", '#636363', '#AEAEAE', '#DADADA']
 colors_purple = ["#554f8a", "#8a94cd", "#ada3e0", "#ab92c3", "#ebebf3"]
 class Plots():
     def chol_plot(self,inp):
-        fig,ax = plt.subplots(figsize=(10,4),facecolor="#ebebeb")
-        ax.set_facecolor("#ebebeb")
+        fig,ax = plt.subplots(figsize=(10,4))
         # Making the KDE plot
         df['chol'].plot.kde(ls='--',color=colors_purple[0],ax=ax)
 
@@ -63,7 +62,6 @@ class Plots():
     def bp_plot(self,inp):
 
         fig,ax = plt.subplots(figsize=(10,4))
-
         df['trestbps'].plot.kde(ls='--',color=colors_purple[0],ax=ax)
 
         ax.spines['left'].set_color(None)
@@ -99,7 +97,6 @@ class Plots():
 
     def thalach_plot(self,inp):
         fig,ax = plt.subplots(figsize=(10,4))
-
         df['thalach'].plot.kde(ls='--',color=colors_purple[0],ax=ax)
 
         ax.spines['left'].set_color(None)

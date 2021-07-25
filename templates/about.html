@@ -13,28 +13,60 @@
 
 <body onload="document.body.style.opacity='1'">
     <nav>
-        <a class="menu titl non" href="/"><b>💓CARDIO-FIT</b></a>
+        <a class="menu titl non" href="/"><b>CARDIO-FIT</b></a>
         <a class="menu non" href="./predict">Prediction</a>
         <a class="menu non" href="/blog">Blog</a>
-        <a class="menu act" href="./about">About Us</a>
+        <a class="menu act abt" href="./about">About Us</a>
     </nav>
     <center>
         <div class="info">
             <div class="bmonke">
                 <img class="dp" src="{{ url_for('static', filename='./about/jay.jpg') }}">
                 <h1 class="infotext main one">Jay Kumar</h1>
-                <h2 class="infotext sub two">Data Science Enthusiast</h2>
+                <h2 class="infotext sub one goal jey">Data Science Enthusiast</h2>
+                <hr>
+                <h3 class="infotext sub one intro first">I see Data Science as a form of art and my goal is to make
+                    others look at data the way I do through my work.</h3>
+                <hr>
+                <div class="icon jey aiml">
+                    <a title="View Jay's Linkedin Profile" class="jey lkdin aiml"
+                        href="https://www.linkedin.com/in/jay-kumar-6884311a8">
+                        <img src="{{ url_for('static', filename='./about/linkedin.png') }}" height="20" width="20">
+                    </a> &emsp;
+                    <a title="View Jay's Git repositories" class="jey ghub aiml" href="https://github.com/jaykumar1607">
+                        <img src="{{ url_for('static', filename='./about/github.png') }}" height="20" width="20">
+                    </a> &emsp;
+                    <a title="Email: jaykumarsjc2022@gmail.com" class="jey email aiml"
+                        href="mailto:jaykumarsjc2022@gmail.com">
+                        <img src="{{ url_for('static', filename='./about/email.png') }}" height="20" width="27">
+                    </a>
+                </div>
             </div>
             <div class="monke">
                 <img class="dp two" src="{{ url_for('static', filename='./about/nkj3.jpg') }}">
                 <h1 class="infotext main two">Nishant Jha</h1>
-                <h2 class="infotext sub two">Web Development Enthusiast</h2>
+                <h2 class="infotext sub two goal nkj">Full-Stack Development Enthusiast</h2>
+                <hr>
+                <h3 class="infotext sub two intro sec">I believe I have what it takes to be a Web Developer - The WWWW
+                    fascinates me, and the caffeine awakes me.</h3>
+                <hr>
+                <div class="icon nkj webd">
+                    <a title="View Nishant's Linkedin profile"class="nkj lkdin webd" href="https://www.linkedin.com/in/nishant-jha-b96b84157/">
+                        <img src="{{ url_for('static', filename='./about/linkedin.png') }}" height="20" width="20">
+                    </a>&emsp;
+                    <a title="View Nishant's Git repositories"class="nkj ghub webd" href="https://github.com/NKJ-C4">
+                        <img src="{{ url_for('static', filename='./about/github.png') }}" height="20" width="20">
+                    </a>&emsp;
+                    <a title="Email: nkj.nishant@gmail.com"class="nkj email webd" href="mailto:nkj.nishant@gmail.com">
+                        <img src="{{ url_for('static', filename='./about/email.png') }}" height="20" width="27">
+                    </a>
+                </div>
             </div>
         </div>
     </center>
     <center>
         <footer id="foot">
-            Made with 💖 🧠 💪 by Jay Kumar and Nishant Jha
+            Made with ❤️ by Jay and Nishant
         </footer>
     </center>
 </body>

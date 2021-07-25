@@ -23,6 +23,7 @@ a {
 
 
 nav {
+    top: 0;
     position: fixed;
     width: 100%;
     display: flex;
@@ -58,7 +59,7 @@ a.non:hover {
 footer {
     position: static;
     bottom: 0;
-    margin: 7% 0 2% 0;
+    margin: 10% 0 2% 0;
     color: grey;
     max-width: max-content;
     /* Height of the footer*/

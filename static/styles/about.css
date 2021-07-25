@@ -1,38 +1,67 @@
 .dp {
     border-radius: 50%;
+    border: 2px solid grey;
     width: 250px;
     height: 250px;
     object-fit: cover;
-    padding: 25px 25px 10px 25px;
+    margin: 25px 25px 10px 25px;
     text-align: center;
     justify-content: center;
 }
 
+a.abt {
+    background-color: black !important;
+    color: white !important;
+}
 
 .info {
     display: flex;
     flex-direction: row;
     padding-top: 100px;
-    width: 50%; 
+    width: 50%;
     align-items: center;
     text-align: center;
     justify-content: center;
 }
 
-.bmonke, .monke{
+.bmonke, .monke {
     border: 1px solid grey;
+    padding: 20px;
     border-radius: 2%;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 400px;
     background-color: white;
     box-shadow: 10px 10px 5px grey;
 }
 
-.sub{
+.main {
+    font-size: 24px;
+}
+
+.goal {
+    font-size: 0.875rem;
     font-weight: 300;
     color: grey;
+    font-style: italic;
 }
-.infotext{
-    padding-left: 1%;
-    padding-right: 2%;
+
+.infotext {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+hr {
+    color: grey;
+    width: 70%;
+}
+
+.intro {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.icon img:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
 }
