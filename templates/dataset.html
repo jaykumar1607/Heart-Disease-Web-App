@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/data.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardio-Fit: About The Dataset</title>
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    <nav>
+        <a class="menu titl" href="/"><b>CARDIO-FIT</b></a>
+        <a class="menu non" href="./predict">Prediction</a>
+        <a class="menu act" href="/blog">Blog - dataset</a>
+        <a class="menu non" href="./about">About Us</a>
+    </nav>
+    <div class="content">
+    <div class="write">
+        <div class="section">
+            <h1 class="heading">About the Dataset</h1>
+            <p class="written one">
+                The dataset that we’ve used to build this application was created and maintained by the University of
+                California Irvine in the United States of America.
+            </p>
+            <center><img src="{{ url_for('static', filename='./dataset/dataset.jpg') }}"></center>
+            <p class="written two">
+                The UCI have their own Machine Learning Repository and they currently maintain 588 data sets as a
+                service to the machine learning community. Here, you can donate and find data sets used by millions of
+                people all around the world!
+            </p>
+            <p class="written three">
+                The Heart Disease dataset consists of 14 attributes in total out of which 13 attributes are asked to the
+                patient to predict the value of the final, 14th attribute which states whether a person has a heart
+                disease or not! There are a total of 303 rows of data in this dataset.
+            </p>
+            <p class="written four">
+                Let’s take a look at the 13 input attribute first:
+            </p>
+            <h3 class="heading sub one">Gender</h3>
+            <p class="written five">
+                This attribute consists of the gender of a patient. In the dataset, there were more male patients than
+                female.
+            </p>
+            <h3 class="heading sub two">Age</h3>
+            <p class="written six">
+                This is the age attribute where the majority of the patients were aged between 51 and 60 years of age.
+            </p>
+            <p class="written six one">
+                Below, we can see the distribution of Gender and Age attributes of the patients according to our
+                dataset.
+            </p>
+            <center>
+                <img src="{{ url_for('static', filename='./dataset/svage.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/svagetwo.png') }}">
+            </center>
+            <h3 class="heading sub three">Chest Pain</h3>
+            <p class="written seven">
+                This attribute consists of 4 values:
+            </p>
+            <ul>
+                <li>
+                    <b>Asymptomatic Chest Pain</b>: Asymptomatic heart attacks medically known as silent myocardial
+                    infarction (SMI) annually accounts for around 45-50% of morbidities due to cardiac ailments and even
+                    premature deaths in India. The incidences among middle aged people experiencing SMI is twice as
+                    likely to develop in males than females. The symptoms of SMI being very mild in comparison to an
+                    actual heart attack; it is described as a silent killer. Unlike the symptoms in a normal heart
+                    attack which includes extreme chest pain, stabbing pain in the arms, neck & jaw, sudden shortness of
+                    breath, sweating and dizziness, the symptoms of SMI are very brief and hence confused with regular
+                    discomfort and most often ignored.
+                </li>
+                <li>
+                    <b>Typical Angina</b>: Typical (classic) angina chest pain consists of:
+                    <ol>
+                        <li>Substernal chest pain or discomfort.</li>
+                        <li>It is provoked by exertion or emotional stress.</li>
+                        <li>It is relieved by rest or nitroglycerine (or both).</li>
+                    </ol>
+                </li>
+                <li>
+                    <b>Atypical Angina</b>: Atypical (probable) angina chest pain applies when 2 out of 3 criteria of
+                    Typical Angina are present.
+                </li>
+                <li>
+                    <b>Non-Anginal Pain</b>: Non-cardiac chest pain (NCCP) is a term used to describe chest pain that
+                    resembles heart pain (also called angina) in patients who do not have heart disease. The pain
+                    typically is felt behind the breast bone (sternum) and is described as oppressive, squeezing or
+                    pressure-like. It may radiate to the neck, left arm or the back (the spine). It may be precipitated
+                    by food intake. It lasts variable periods of time and it is not unusual for it to last hours.
+                    Patients may also complain of associated reflux symptoms such as heartburn (a burning feeling behind
+                    the breast bone) or fluid regurgitation (a sensation of stomach juices coming back toward the chest
+                    and even to the mouth frequently with a bitter or sour taste).
+                </li>
+            </ul>
+            <h3 class="heading sub four">Fasting Blood Sugar Level</h3>
+            <p calss="written eight">
+                A blood sample will be taken after an overnight fast. A fasting blood sugar level less than 100 mg/dL
+                (5.6 mmol/L) is normal. A fasting blood sugar level from 100 to 125 mg/dL (5.6 to 6.9 mmol/L) is
+                considered prediabetes. If it's 126 mg/dL (7 mmol/L) or higher on two separate tests, you have diabetes.
+            </p>
+            <h3 class="heading sub five">Resting Blood Pressure</h3>
+            <p class="written nine">
+                Blood pressure is a measure of the force that your heart uses to pump blood around your body.
+            </p>
+            <p class="written nine one">
+                Blood pressure is measured in millimetres of mercury (mmHg) and is given as 2 figures:
+            </p>
+            <ul>
+                <li>
+                    <b>systolic pressure</b> – the pressure when your heart pushes blood out
+                </li>
+                <li>
+                    <b>diastolic pressure</b> – the pressure when your heart rests between beats
+                </li>
+            </ul>
+            <p class="written nine note">
+                <b>NOTE</b>: In this dataset, only the patient’s systolic pressure has been recorded.
+            </p>
+            <p class="written nine two">
+                In the figures below, you can see the distribution of the patients’ Resting Blood Pressure according to
+                our dataset.
+            </p>
+            <center>
+                <img src="{{ url_for('static', filename='./dataset/rbpd.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/rbpdtwo.png') }}">
+            </center>
+            <h3 class="heading sub six">Serum Cholesterol Levels</h3>
+            <p class="written ten">
+                Cholesterol is often associated with heart disease. That’s because low-density lipoproteins (LDL) can
+                build up in your arteries and restrict or block blood flow. Your body still needs a little cholesterol
+                for healthy digestion and to make vitamin D and certain hormones.
+            </p>
+            <p class="written ten one">
+                Cholesterol is a type of fat. It’s also called a lipid. It travels through your bloodstream in tiny
+                molecules wrapped inside proteins. These packages are called lipoproteins. LDL is one of the main types
+                of lipoproteins in your blood. The other main type is high-density lipoproteins (HDL). A third type of
+                lipid, called a triglyceride, also circulates in your blood. The serum cholesterol level is measured in
+                <b>mg/dl</b>.
+            </p>
+            <p class="written ten two">
+                In the figures below, you can see the distribution of Serum Cholesterol Levels among the patients in the
+                dataset that we’ve used:
+            </p>
+            <center>
+                <img src="{{ url_for('static', filename='./dataset/scld.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/scldtwo.png') }}">
+            </center>
+            <h3 class="heading sub seven">Maximum Heart Rate</h3>
+            <p class="written eleven">
+                This attribute is conducted during the exercise of the heart, i.e. it the the maximum heart rate of a
+                patient achieved during exercise
+            </p>
+            <p class="written eleven one">
+                In the figure below, we can look at the Maximum Heart Rate Distribution of the patients in the dataset:
+            </p>
+            <center>
+                <img src="{{ url_for('static', filename='./dataset/maxheart.png') }}">
+                <img src="{{ url_for('static', filename='./dataset/maxhearttwo.png') }}">
+            </center>
+            <h3 class="heading sub eight">Exercise Induced Angina</h3>
+            <p class="written twelve">
+                This attribute basically states whether an angina is invoked during the exercise of your body in which
+                your heart has to work harder to maintain the flow of blood.
+            </p>
+            <h3 class="heading sub nine">Resting Electrocardiographic Results</h3>
+            <p class="written thirteen">
+                Resting 12-lead electrocardiography (ECG) is a non-invasive test that can detect abnormalities including
+                arrhythmias, evidence of coronary heart disease, left ventricular hypertrophy and bundle branch blocks.
+                In the preoperative setting, resting ECG is used to assess known cardiovascular diseases, to detect
+                previously undiagnosed cardiovascular diseases, and to provide a baseline standard against which to
+                measure changes in the postoperative period. When conducted by a suitably trained individual, the
+                resting ECG is simple to perform and interpret, with the only described complication being minor allergy
+                to the ECG electrodes resulting in self-limiting skin reddening. However, there is uncertainty regarding
+                the prognostic significance of different resting ECG abnormalities in the perioperative setting,
+                especially in asymptomatic patients.
+            </p>
+            <p class="written thirteen one">
+                In the form, there are 3 possible values you can fill in this attribute in accordance to your ECG
+                result, which are:
+            <ol>
+                <li>Normal</li>
+                <li>Hypertrophy</li>
+                <li>ST-T Wave Normality</li>
+            </ol>
+            </p>
+            <h3 class="heading sub ten">Slope of the peak exercise ST Segment</h3>
+            <p class="written fourteen">
+                This is the slope of the ST Segment depression which can be found by taking the Electrocardiographic
+                test. There are 3 possible values associated with the slope:
+            <ol>
+                <li>Normal</li>
+                <li>Downsloping</li>
+                <li>Upsloping</li>
+            </ol>
+            </p>
+            <h3 class="heading sub eleven">ST Depression induced by exercise relative to rest</h3>
+            <p class="written fifteen">
+                This is a value that can also be found out in the ECG report. ST depression in ECG at entry indicates
+                severe coronary lesions and large benefits of an early invasive treatment strategy in unstable coronary
+                artery disease.
+            </p>
+            <p class="written fifteen one">
+                In the figure below, we can see the distribution of ST Depression values among the patients in the
+                dataset.
+            </p>
+            <center>
+                <img src="{{ url_for('static', filename='./dataset/oldpeak.png') }}">
+            </center>
+            <h3 class="heading sub twelve">Number of vessels colored in Fluoroscopy</h3>
+            <p class="written sixteen">
+                Fluoroscopy is like an imaging tool in the field of medical science, similar to an animated version of
+                an X-Ray. In cardiac catheterization, fluoroscopy is used to help the healthcare provider see the flow
+                of blood through the coronary arteries. It can check for arterial blockages. Fluoroscopy uses a dye to
+                put it on a vein or vessel to observe it clearly for further examination.
+            </p>
+            <h3 class="heading sub thirteen">Thalium Stress Test</h3>
+            <p class="written seventeen">
+                A thallium stress test is a nuclear imaging test that shows how well blood flows into your heart while
+                you’re exercising or at rest. This test is also called a cardiac or nuclear stress test.
+            </p>
+            <p class="written eighteen">
+                During the procedure, a liquid with a small amount of radioactivity called a radioisotope is
+                administered into one of your veins. The radioisotope will flow through your bloodstream and end up in
+                your heart. Once the radiation is in your heart, a special camera called a gamma camera can detect the
+                radiation and reveal any issues your heart muscle is having.
+            </p>
+            <p class="written nineteen">
+                There are 3 possible values you can input in the form after taking the thallium test:
+                <ol>
+                    <li>Normal</li>
+                    <li>Fixed Defect</li>
+                    <li>Reversible Defect</li>
+                </ol>
+            </p>
+            <center>
+                <img src="{{ url_for('static', filename='./dataset/featpie.png') }}">
+            </center>
+        </div>
+    </div>
+    </div>
+    <center>
+        <footer id="foot">
+            Made with ❤️ by Jay and Nishant
+        </footer>
+    </center>
+</body>
+
+</html>

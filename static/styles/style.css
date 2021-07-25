@@ -1,0 +1,68 @@
+body {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    margin: 0;
+    font-family: "Roboto", monospace;
+    background-color: rgb(235, 235, 235);
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+nav {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+    background-color: white;
+    border-bottom: 1px solid #aea0dc;
+    box-shadow: 0px 1px 7px #8455ab;
+}
+
+.act {
+    background-color: #8455ab;
+    color: white;
+}
+.act:hover{
+    background-color: #8455ab;
+    color: white;
+}
+.titl{
+    font-size: 20px;
+}
+
+a.menu {
+    padding: 15px;
+    text-decoration: none;
+}
+
+a.non:hover {
+    background-color: #aea0dc;
+    transition: 0.5s;
+    color: black;
+}
+
+footer {
+    position: static;
+    bottom: 0;
+    margin: 10% 0 2% 0;
+    color: grey;
+    max-width: max-content;
+    /* Height of the footer*/
+    padding: 10px;
+    background-color: white;
+}

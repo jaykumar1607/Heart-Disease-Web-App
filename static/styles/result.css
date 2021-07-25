@@ -1,0 +1,41 @@
+/*Result Table*/
+#restable{
+    width: 40%;
+    border: 5px solid black;
+    border-radius: 10px;
+    font-family: 'Calibri', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+th{
+    font-size:30px;
+}
+
+th, td{
+    padding: 10px;
+    text-align: center;
+}
+
+td{
+    font-size: 20px;
+}
+
+/*Whole content*/
+.content{
+    display: block;
+    width: 60%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.write {
+    background-color: white;
+    border: solid grey 1px;
+    border-radius: 5px;
+    color: black;
+    box-shadow: 10px 10px 5px grey;
+    padding-top: 70px;
+}
+
+.plots{
+    padding-bottom: 50px;
+}

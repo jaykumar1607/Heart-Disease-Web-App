@@ -2,60 +2,94 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" type="text/css" href="../static/style.css">
-	<link rel="stylesheet" type="text/css" href="../static/table_style.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/style.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/result.css')}}">
 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cardio - Prediction - Results</title>
+	<style type="text/css">
+		li {
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+		mark{
+			margin-left: 80px;
+			margin-right: 50px;
+			background-color: #c6c0e2;
+			padding: 5px;
+		}
+	</style>
+	<title>Cardio-Fit | Prediction-Results</title>
 </head>
 
-<body>
-	<a href="./"><img class="logo" src="../static/logo2.png"></a>
-    <nav>
-        <a class="menu" href="/">Home</a>
-        <a class="menu" href="./predict">Prediction</a>
-        <a class="menu" href="./about">About Us</a>
-    </nav>
-    <hr>
+<body class="trial">
+	<nav>
+		<a class="menu titl" href="/"><b>CARDIO-FIT</b></a>
+		<a class="menu non" href="./predict">Prediction</a>
+		<a class="menu non" href="/blog">Blog</a>
+		<a class="menu non" href="./about">About Us</a>
+	</nav>
+	<div class="content">
+		<div class="write">
+			<h1>
+				<center><mark>Thank You for using Cardio-Fit!</mark></center>
+			</h1>
+			<br><br><br>
+			<center>
+				<table id="restable">
+					<tr>
+						<th>Name</th>
+						<th>Result</th>
+					</tr>
+					<tr>
+						<td>{{session['name']}}</td>
+						<td>{{results}}</td>
+					</tr>
+				</table>
+			</center>
+			<br><br><br>
+			<h2>
+				<center><u>Here is your analytical report</u></center>
+			</h2>
+			
+			<br><br>
+			<mark>NOTE: The results are purely based on our dataset, so we advise you to visit a doctor
+				nonetheless.</mark>
+			<br><br><br>
+			<ul>
+				<li>{{reports['chol']}}</li>
 
-		<h1><center>Thank You for using Cardio-Fit!</center></h1>
-		<br>
-		<center><table>
-		 <tr>
-			 <th>Name</th>
-			 <th>Result</th>
-		 </tr>
-		 <tr>
-			 <td>{{session['name']}}</td>
-			 <td>{{results}}</td>
-		 </tr>
-		</table>
-		<br>
-		<h2><center>Here is your analytical report:</center></h2>
-		<br>
-		<ul>
-			<li>{{reports['chol']}}</li>
-			<center><image src='/plot_chol.png'>
-			<br><br><br>
-			<li>{{reports['trestbps']}}</li>
-			<center><image src='/plot_bp.png'>
-			<br><br><br>
-			<li>{{reports['thalach']}}</li>
-			<center><image src='/plot_thalach.png'>
-			<br><br><br>
-			<li>{{reports['cp']}}</li>
-			<li>{{reports['fps']}}</li>
-			<br><br>
-			<li>{{reports['exang']}}</li>
-			<br><br>
-			<li>{{reports['slope']}}</li>
-			<br><br>
-			<li>{{reports['thal']}}</li>
-			<br><br>
-			<li>{{reports['ca']}}</li>
-			<br><br>
-		</ul>
+				<image class="plots" src='/plot_chol.png'>
+					<br>
+					<li>{{reports['trestbps']}}</li>
+
+					<image class="plots" src='/plot_bp.png'>
+						<br>
+						<li>{{reports['thalach']}}</li>
+
+						<image class="plots" src='/plot_thalach.png'>
+							<br><br>
+							<li>{{reports['cp']}}</li>
+							<br><br>
+							<li>{{reports['fbs']}}</li>
+							<br><br>
+							<li>{{reports['exang']}}</li>
+							<br><br>
+							<li>{{reports['slope']}}</li>
+							<br><br>
+							<li>{{reports['thal']}}</li>
+							<br><br>
+							<li>{{reports['ca']}}</li>
+							<br><br>
+			</ul>
+		</div>
+	</div>
 </body>
+<center>
+	<footer id="foot">
+		Made with ❤️ by Jay and Nishant
+	</footer>
+</center>
+
 </html>

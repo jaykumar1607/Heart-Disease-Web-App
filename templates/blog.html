@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/blog.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardio-Fit: Blog</title>
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    <nav>
+        <a class="menu titl" href="/"><b>CARDIO-FIT</b></a>
+        <a class="menu non" href="./predict">Prediction</a>
+        <a class="menu act" href="/blog">Blog</a>
+        <a class="menu non" href="./about">About Us</a>
+    </nav>
+    <div class="content">
+        <div class="write">
+            <div class="section">
+                <h1 class="heading">About the Dataset</h1>
+                <hr>
+                <center><img class="blog1" src="{{ url_for('static', filename='./blog/thumbnail.png') }}"></center>
+                <p class="written one">
+                    The dataset that we’ve used to build this application was created and maintained by the University
+                    of
+                    California Irvine in the United States of America. The UCI have their own Machine Learning
+                    Repository
+                    and they currently maintain 588 data sets as a service to the machine learning community. Here, you
+                    can
+                    donate and find data sets used by millions of people all around the world!
+                </p>
+                <div class="more">
+                    <a class="todata" href="./dataset">Click to Read more...</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="write">
+            <div class="section">
+                <h1 class="heading">Heart Diseases and their Preventions</h1>
+                <hr>
+                <center><img class="blog2" src="{{ url_for('static', filename='./blog/aadmi') }}">
+                </center>
+                <p class="written one">
+                    Heart disease refers to any condition affecting the heart. There are many types, some of which are
+                    preventable.
+
+                    Unlike cardiovascular disease, which includes problems with the entire circulatory system, heart
+                    disease
+                    affects only the heart.
+                </p>
+                <div class="more">
+                    <a class="toheart" href="./heartblog">Click to Read more...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <center>
+        <footer id="foot">
+            Made with ❤️ by Jay and Nishant
+        </footer>
+    </center>
+</body>
+
+</html>

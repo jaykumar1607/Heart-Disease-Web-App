@@ -11,6 +11,7 @@ import matplotlib
 matplotlib.use('Agg')
 import io
 from plots import Plots
+from flask_bootstrap import Bootstrap
 
 def make_predictions(model,sample_json):
 
@@ -78,6 +79,7 @@ def report_cont(feat):
 
 
 app = Flask(__name__)
+Bootstrap(app)
 app.config['SECRET_KEY']='jaykumar'
 
 class Heart_Form(FlaskForm):
@@ -107,9 +109,21 @@ class Heart_Form(FlaskForm):
 def index():
     return render_template('index.html')
 
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/dataset')
+def dataset():
+    return render_template('dataset.html')
+
+@app.route('/heartblog')
+def heartblog():
+    return render_template('heartblog.html')
 
 @app.route('/predict',methods=['GET','POST'])
 def home():
