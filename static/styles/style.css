@@ -13,14 +13,12 @@ body {
     }
     100% {
         opacity: 1;
-     }
+    }
 }
 
 a {
     text-decoration: none;
 }
-
-
 
 nav {
     top: 0;
@@ -37,16 +35,18 @@ nav {
     background-color: #8455ab;
     color: white;
 }
-.act:hover{
+
+.act:hover {
     background-color: #8455ab;
     color: white;
 }
-.titl{
+
+.titl {
     font-size: 20px;
 }
 
 a.menu {
-    color:black !important;
+    color: black !important;
     padding: 15px;
     text-decoration: none;
 }
@@ -66,4 +66,16 @@ footer {
     /* Height of the footer*/
     padding: 10px;
     background-color: white;
+}
+
+@media only screen and (max-width: 1269px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    footer{
+        max-width: unset;
+    }
 }

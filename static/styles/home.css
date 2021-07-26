@@ -1,15 +1,19 @@
 div.gallery {
-    margin: 100px 12px 12px 12px;
+    margin-top: 100px;
+    padding: 2%;
     border-radius: 10px;
-    width: 30%;
-    display: inline-flex;
-    flex-direction: column;
+    text-align: center;
+}
+
+.dused {
+    width: 100% !important;
 }
 
 div.gallery img {
-    width: 100%;
     border-radius: 10px;
     box-shadow: 7px 7px 5px grey;
+    width: 93%;
+    height: 94%;
 }
 
 div.gallery img:hover {
@@ -36,11 +40,19 @@ div.desc {
     margin: 70px 500px 200px 100px;
 }
 
+.parentgal {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
 .banner {
     background-color: white;
     background-image: url('../home/bannerpurple.jpg');
-    background-size: cover;
-    background-position: 250px;
+    background-size: contain;
+    background-position: 45vh;
     background-repeat: no-repeat;
     padding-top: 40px;
     height: 700px;
@@ -54,22 +66,48 @@ div.desc {
     max-width: 35%;
 }
 
+.logo {
+    height: 76%;
+    width: 76%;
+}
 
-.descban{
+.descban {
     color: grey;
     font-size: 24px;
-    font-family:'Segoe UI';
+    font-family: 'Segoe UI';
     padding-bottom: 20px;
 }
 
-.wlcm{
+.wlcm {
     box-shadow: 10px 10px 5px grey;
 }
 
-
-.descdesc{
+.descdesc {
     color: grey;
     font-size: 24px;
     font-family: 'Segoe UI';
 }
 
+@media only screen and (max-width: 1269px) {
+    .parentgal {
+        flex-direction: column;
+    }
+    .description {
+        color: black;
+        margin-left: 100px;
+        margin-top: 200px;
+        margin-right: auto;
+        max-width: 35%;
+    }
+    .banner {
+        background-color: white;
+        background-image: url(../home/bannerpurple.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-top: 40px;
+        background-position-y: center;
+        height: 700px;
+        background-position-x: 15vh;
+        color: white;
+    }
+}
