@@ -39,8 +39,8 @@ div.desc {
 .banner {
     background-color: white;
     background-image: url('../home/bannerpurple.jpg');
-    background-size: cover;
-    background-position: 250px;
+    background-size: contain;
+    background-position: 300px;
     background-repeat: no-repeat;
     padding-top: 40px;
     height: 700px;
@@ -60,6 +60,11 @@ div.desc {
     font-size: 24px;
     font-family:'Segoe UI';
     padding-bottom: 20px;
+}
+
+.logo{
+    width:76%;
+    height:76%;
 }
 
 .wlcm{
