@@ -19,6 +19,12 @@
 			background-color: #c6c0e2;
 			padding: 5px;
 		}
+		.res1{
+			color:red;
+		}
+		.res2{
+			color:green;
+		}
 	</style>
 	<title>Cardio-Fit | Prediction-Results</title>
 </head>
@@ -44,7 +50,11 @@
 					</tr>
 					<tr>
 						<td>{{session['name']}}</td>
-						<td>{{results}}</td>
+						{% if 'NEGATIVE' in results %}
+							<td class="res1">{{results}}</td>
+						{% elif 'POSITIVE' in results %}
+							<td class="res2">{{results}}</td>
+						{% endif %}
 					</tr>
 				</table>
 			</center>
@@ -52,7 +62,7 @@
 			<h2>
 				<center><u>Here is your analytical report</u></center>
 			</h2>
-			
+
 			<br><br>
 			<mark>NOTE: The results are purely based on our dataset, so we advise you to visit a doctor
 				nonetheless.</mark>
