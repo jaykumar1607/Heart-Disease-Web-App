@@ -94,20 +94,35 @@ div.desc {
     }
     .description {
         color: black;
-        margin-left: 100px;
-        margin-top: 200px;
+        margin-left: auto;
+        margin-top: 700px;
         margin-right: auto;
-        max-width: 35%;
+        max-width: 50%;
     }
     .banner {
         background-color: white;
         background-image: url(../home/bannerpurple.jpg);
-        background-size: contain;
         background-repeat: no-repeat;
         padding-top: 40px;
         background-position-y: center;
         height: 700px;
-        background-position-x: 15vh;
         color: white;
+        margin-top: 400px;
+        background-size: 170%;
+        background-position-x: center;
+    }
+
+    div.desc{
+        color: black !important;
+        background-color: white !important;
+    }
+
+    .descdesc{
+        font-size: 36px;
+        font-style:normal;
+    }
+
+    .parentgal{
+        margin-top: 450px;
     }
 }

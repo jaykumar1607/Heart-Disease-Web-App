@@ -69,13 +69,32 @@ footer {
 }
 
 @media only screen and (max-width: 1269px) {
+    body{
+        background-color: white;
+    }
     nav {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
+        position:absolute;
+        width: 90%;
+        margin-left: 40px;
+        background-color: rgb(235, 235, 235);
+        box-shadow: none;
+        border-bottom: none;
+    }
+
+    .titl, .menu{
+        font-size: 3rem;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+        padding-left: 50px !important;
+    }
+    .act{
+        background-color: white;
+        border-left: 15px solid #8455ab;
     }
     footer{
         max-width: unset;
     }
+
+    
 }
