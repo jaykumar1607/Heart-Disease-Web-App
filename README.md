@@ -8,7 +8,7 @@ Cardio-Fit is a **Machine Learning based Web Application.** It can detect whethe
 ## 🎥 Demo
 This demo shows how you will input the data and based on that, the ML model will predict the result along side your *personalized analytical report*.
 
-<div>
-    <center><img src="https://raw.githubusercontent.com/jaykumar1607/Heart-Disease-Web-App/main/docs/images/demo.gif">
+<div align="center;">
+    <img src="https://raw.githubusercontent.com/jaykumar1607/Heart-Disease-Web-App/main/docs/images/demo.gif">
 </div>
 
