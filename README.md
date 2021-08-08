@@ -45,12 +45,12 @@ We've used **Heroku** as our preferred platform to deploy our web application.
 
 For all the front end nerds out there.
 
-|Hex                                                             | |
-|----------------------------------------------------------------|- |
-|![#434167](https://via.placeholder.com/10/434167?text=+) #434167 | |
-|![#9894d1](https://via.placeholder.com/10/9894d1?text=+) #9894d1 | |
-|![#aea0dc](https://via.placeholder.com/10/aea0dc?text=+) #aea0dc | |
-|![#ebebeb](https://via.placeholder.com/10/ebebeb?text=+) #ebebeb | | 
+|Hex                                                             |
+|----------------------------------------------------------------|
+|![#434167](https://via.placeholder.com/10/434167?text=+) #434167 |
+|![#9894d1](https://via.placeholder.com/10/9894d1?text=+) #9894d1 |
+|![#aea0dc](https://via.placeholder.com/10/aea0dc?text=+) #aea0dc |
+|![#ebebeb](https://via.placeholder.com/10/ebebeb?text=+) #ebebeb |
 
 
 ## 👨‍💻 Contributors
