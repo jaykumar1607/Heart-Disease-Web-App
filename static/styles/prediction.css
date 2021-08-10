@@ -43,3 +43,7 @@ h1, h2{                            /*Form Heading*/
 .submitted{
     pointer-events: none;
 }
+
+.fa:hover{
+    cursor:pointer;
+}

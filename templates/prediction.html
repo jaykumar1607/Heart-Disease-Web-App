@@ -11,6 +11,7 @@ Cardio-Fit: Prediction
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./styles/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='./styles/prediction.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {% endblock %}
     {% block metas %}
     <meta charset="UTF-8">
@@ -20,66 +21,74 @@ Cardio-Fit: Prediction
 </head>
 
 {% block content %}
+
 <body>
-<nav>
-    <a class="menu titl non" href="/"><b>CARDIO-FIT</b></a>
-    <a class="menu act" href="./predict">Prediction</a>
-    <a class="menu non" href="/blog">Blog</a>
-    <a class="menu non" href="./about">About Us</a>
-</nav>
-<br>
-<div class="fill">
-    <div id="heading">
-        <b>
-            <h1>
-                Heart Disease Prediction
-            </h1>
-            <br>
-            <h2>
-                Please enter your test details below:
-            </h2>
-        </b>
-    </div>
+    <nav>
+        <a class="menu titl non" href="/"><b>CARDIO-FIT</b></a>
+        <a class="menu act" href="./predict">Prediction</a>
+        <a class="menu non" href="/blog">Blog</a>
+        <a class="menu non" href="./about">About Us</a>
+    </nav>
     <br>
-    <form method="POST" id="values">
+    <div class="fill">
+        <div id="heading">
+            <b>
+                <h1>
+                    Heart Disease Prediction
+                </h1>
+                <br>
+                <h2>
+                    Please enter your test details below:
+                </h2>
+                <br>
+                <center><mark>NOTE: The values for every input field are specified clearly. However, if in doubt - you can learn more about the terms we've used from <a href="./dataset">here.</a></mark></center>
+            </b>
+        </div>
         <br>
-        {# This hidden_tag is a CSRF security feature. #}
-        {{ form.csrf_token }}
+        <form method="POST" id="values">
+            <br>
+            {# This hidden_tag is a CSRF security feature. #}
+            {{ form.csrf_token }}
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.name) }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.name, placeholder='Full Name, for eg: Carl Johnson') }} </span></p>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.age) }} </span> </p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.age, placeholder='Any age') }} </span> </p>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.sex) }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.sex) }} </span></p>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.cp) }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.cp) }}<i class="fa" onclick="document.getElementById('showtipcp').innerHTML='Please refer to the \'Chest Pain\' section of our dataset blog.'" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtipcp" style="font-size:16px"></span></i></span></p>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.trestbps) }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.trestbps, placeholder='A normal blood pressure level is less than 120/80 mmHg, however a range of 95-200 is accepted.') }} </span></p>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.chol) }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.chol, placeholder='Cholesterol is a type of fat. The levels can be between 130-560.') }} </span></p>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.fbs) }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.fbs) }} <i class="fa" onclick="document.getElementById('showtipfbs').innerHTML='A fasting blood sugar level from 100 to 125 mg/dL (5.6 to 6.9 mmol/L) is considered prediabetes. If it\'s 126 mg/dL (7 mmol/L) or higher on two separate tests, you have diabetes. '" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtipfbs" style="font-size:16px"></span></i></span></p>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.restecg) }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.restecg) }} <i class="fa" onclick="document.getElementById('showtipecg').innerHTML='Resting 12-lead electrocardiography (ECG) is a non-invasive test that can detect abnormalities including arrhythmias'" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtipecg" style="font-size:16px"></span></i> </span></p>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.thalach) }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.thalach, placeholder='Values can be between 75-200') }} </span></p>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.exang) }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.exang) }} <i class="fa" onclick="document.getElementById('showtipang').innerHTML='This attribute basically states whether an angina is invoked during the exercise of your body in which your heart has to work harder to maintain the flow of blood.'" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtipang" style="font-size:16px"></span></i></span></p>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.oldpeak) }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.oldpeak, placeholder='The observable range for this column is between 0.0 and 6.0, Values may be in decimals.') }} </span></p>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.slope) }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.slope) }} <i class="fa" onclick="document.getElementById('showtip').innerHTML='This field\'s value can only found by taking the Electrocardiographic test.'" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtip" style="font-size:16px"></span></i></span></p>
+ 
+            <p id="ele"><span id="key">{{ wtf.form_field(form.thal) }} <i class="fa" onclick="document.getElementById('showtipthal').innerHTML='A nuclear imaging test that shows how well blood flows into your heart while you’re exercising or at rest.'" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtipthal" style="font-size:16px"></span></i></span></p>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.thal) }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.ca) }} <i class="fa" onclick="document.getElementById('showtipca').innerHTML='It can check for the number of arterial blockages. Fluoroscopy uses a dye to put it on a vein or vessel to observe it clearly for further examination. '" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtipca" style="font-size:16px"></span></i></span></p>
+            <br><br>
+            <center><input id="submission" class="btn btn-success" type="submit" value="Analyze"></center>
+            <br><br><br><br>
 
-        <p id="ele"><span id="key">{{ wtf.form_field(form.ca) }} </span></p>
-        <br><br>
-        <center><input id="submission" class="btn btn-success" type="submit" value="Analyze"></center>
-        <br><br><br><br>
-
-    </form>
-</div>
+        </form>
+    </div>
 </body>
+{% endblock %}
+
+{% block scripts %}
+
+{{super()}}
 {% endblock %}
 
 <center>
