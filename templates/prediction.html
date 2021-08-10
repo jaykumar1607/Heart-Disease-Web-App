@@ -64,13 +64,13 @@ Cardio-Fit: Prediction
 
             <p id="ele"><span id="key">{{ wtf.form_field(form.fbs) }} <i class="fa" onclick="document.getElementById('showtipfbs').innerHTML='A fasting blood sugar level from 100 to 125 mg/dL (5.6 to 6.9 mmol/L) is considered prediabetes. If it\'s 126 mg/dL (7 mmol/L) or higher on two separate tests, you have diabetes. '" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtipfbs" style="font-size:16px"></span></i></span></p>
 
-            <p id="ele"><span id="key">{{ wtf.form_field(form.restecg) }} <i class="fa" onclick="document.getElementById('showtipecg').innerHTML='Resting 12-lead electrocardiography (ECG) is a non-invasive test that can detect abnormalities including arrhythmias'" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtipecg" style="font-size:16px"></span></i> </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.restecg) }} <i class="fa" onclick="document.getElementById('showtipecg').innerHTML='The result of your ECG test'" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtipecg" style="font-size:16px"></span></i> </span></p>
 
             <p id="ele"><span id="key">{{ wtf.form_field(form.thalach, placeholder='Values can be between 75-200') }} </span></p>
 
             <p id="ele"><span id="key">{{ wtf.form_field(form.exang) }} <i class="fa" onclick="document.getElementById('showtipang').innerHTML='This attribute basically states whether an angina is invoked during the exercise of your body in which your heart has to work harder to maintain the flow of blood.'" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtipang" style="font-size:16px"></span></i></span></p>
 
-            <p id="ele"><span id="key">{{ wtf.form_field(form.oldpeak, placeholder='The observable range for this column is between 0.0 and 6.0, Values may be in decimals.') }} </span></p>
+            <p id="ele"><span id="key">{{ wtf.form_field(form.oldpeak, placeholder='The observable range for this column is between 0.0 and 6.0, Values may be in decimals.') }} <i class="fa" onclick="document.getElementById('showtipop').innerHTML='This field\'s value can only found by taking the Electrocardiographic test.'" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtipop" style="font-size:16px"></span></i> </span></p>
 
             <p id="ele"><span id="key">{{ wtf.form_field(form.slope) }} <i class="fa" onclick="document.getElementById('showtip').innerHTML='This field\'s value can only found by taking the Electrocardiographic test.'" style="font-size:24px" >&#xf05a; <span class="showtip" id="showtip" style="font-size:16px"></span></i></span></p>
  
