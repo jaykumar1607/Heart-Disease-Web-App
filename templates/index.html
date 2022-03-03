@@ -17,41 +17,52 @@
     </nav>
     <div class="banner">
         <div class="description">
-            <i class="descban" id="descban"><img class="descban logo"
-                    src="{{ url_for('static', filename='./home/logo2.png') }}"></i><br><br>
-            <i class="descdesc" id="descdesc">Cardio-Fit is a Machine Learning based Web Application. It can detect
+            <div class="descban" id="descban"><img class="descban logo"
+                    src="{{ url_for('static', filename='./home/logo2.png') }}"></div><br><br>
+            <span class="descdesc" id="descdesc">Cardio-Fit is a Machine Learning based Web Application. It can detect
                 whether you are suffering from a heart disease
                 or not.
-            </i>
+            </span>
         </div>
     </div>
     <div class="parentgal">
         <div class="gallery">
             <a class="gal" target="_blank" href="./predict">
-                <img src="{{ url_for('static', filename='./home/predict.png')}}" alt="Prediction">
-
+                <div class="gal-cont">
+                    <img src="{{ url_for('static', filename='./home/predict.png')}}" alt="Prediction">
+                </div>
+            </a>
+            <a class="gal" target="_blank" href="./predict">
                 <div class="desc">Click to check if you have risk of any heart disease</div>
             </a>
         </div>
 
         <div class="gallery">
+            <div class="gal-cont">
+                <a class="gal dused" target="_blank" href="./dataset">
+                    <img src="{{ url_for('static', filename='./home/UCI.png')}}" alt="Dataset Used">
+                </a>
+            </div>
             <a class="gal dused" target="_blank" href="./dataset">
-                <img src="{{ url_for('static', filename='./home/UCI.png')}}" alt="Dataset Used">
                 <div class="desc">About the Dataset used</div>
             </a>
 
         </div>
 
         <div class="gallery">
+            <div class="gal-cont">
+                <a class="gal" target="_blank" href="./heartblog">
+                    <img src="{{ url_for('static', filename='./home/know.png')}}" alt="Heart Diseases">
+                </a>
+            </div>
             <a class="gal" target="_blank" href="./heartblog">
-                <img src="{{ url_for('static', filename='./home/know.png')}}" alt="Heart Diseases">
                 <div class="desc">Heart diseases can be serious. Click to know more about them.</div>
             </a>
         </div>
     </div>
     <center>
         <footer id="foot">
-            Made with ❤️ by Jay and Nishant
+            Engineered ⚙️ by Jay and Nishant
         </footer>
     </center>
 </body>
