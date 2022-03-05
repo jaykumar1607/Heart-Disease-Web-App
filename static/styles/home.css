@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 .parentgal {
     display: flex;
     justify-content: space-around;
@@ -68,14 +71,16 @@ div.desc {
     background-position: 45vh;
     background-repeat: no-repeat;
     padding-top: 40px;
-    height: 700px;
+    height: 900px;
     color: white;
 }
 
 .description {
+    display: flex;
+    flex-direction: column;
     color: black;
     margin-left: 130px;
-    margin-top: 200px;
+    margin-top: 250px;
     max-width: 35%;
 }
 
@@ -91,6 +96,27 @@ div.desc {
     padding-bottom: 20px;
 }
 
+.desc-link-parent{
+    margin-top: 10px;
+}
+.desc-link {
+    display: inline-block;
+    font-size: 1em;
+    background: #aea0dc;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.4s;
+    border: 1px solid purple;
+}
+.desc-link:hover {
+    letter-spacing: 6px;
+    background-color: transparent;
+    color: #daa520;
+}
 .wlcm {
     box-shadow: 10px 10px 5px grey;
 }

@@ -24,7 +24,8 @@ a.abt {
     justify-content: center;
 }
 
-.bmonke, .monke {
+.monke {
+    height: 550px;
     border: 1px solid grey;
     padding: 20px;
     border-radius: 2%;
@@ -32,8 +33,10 @@ a.abt {
     margin-right: 40px;
     width: 400px;
     background-color: white;
-    box-shadow: 10px 10px 5px grey;
+    transition: 0.4s;
 }
+
+
 
 .main {
     font-size: 24px;

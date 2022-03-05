@@ -18,14 +18,19 @@
     <div class="banner">
         <div class="description">
             <div class="descban" id="descban"><img class="descban logo"
-                    src="{{ url_for('static', filename='./home/logo2.png') }}"></div><br><br>
+                    src="{{ url_for('static', filename='./home/logo2.png') }}"></div>
             <span class="descdesc" id="descdesc">Cardio-Fit is a Machine Learning based Web Application. It can detect
                 whether you are suffering from a heart disease
                 or not.
             </span>
+            <div class="desc-link-parent">
+                <a class="desc-link explore" href="#parentgal">Explore<script>document.write(">")</script></a>
+                <a class="desc-link prd" href="./predict" title="Open app and Predict">Predict</a>
+            </div>
+            
         </div>
     </div>
-    <div class="parentgal">
+    <div class="parentgal" id="parentgal">
         <div class="gallery">
             <a class="gal" target="_blank" href="./predict">
                 <div class="gal-cont">
